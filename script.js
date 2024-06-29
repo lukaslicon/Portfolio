@@ -40,6 +40,14 @@ const App = () => {
                 <button onClick={() => handleScrollTo("projects")}>Projects</button>
                 <button onClick={() => handleScrollTo("education")}>Education</button>
                 <button onClick={() => handleScrollTo("contact")}>Contact</button>
+                <div className="resume-buttons">
+                    <a className="resume-button" href="resumes\LukasLicon-ResumeWeb.pdf" target="_blank" rel="noopener noreferrer">
+                        Web Resume
+                    </a>
+                    <a className="resume-button" href="resumes\LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">
+                        Game Resume
+                    </a>
+                </div>
                 <span className="navbar-email">lukas@licons.com</span>
             </div>
             <div className="content">
@@ -61,7 +69,7 @@ const App = () => {
                             </div>
                             {/*IMG about me*/}
                             <div className="about-images">
-                                <img src="path_to_your_image.jpg" alt="Description of Image" className="about-image" />
+                                <img src="assets\profile.jpg" alt="Profile Image" className="about-image" />
                             </div>
                         </div>
                     </section>

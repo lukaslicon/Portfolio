@@ -48,9 +48,8 @@
 }
 
 .about-image {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+    padding-bottom: 10%;
+    width: 40%;
 }
 
 .about-images {
@@ -58,13 +57,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
-.about-images img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
 
 .contact-group {
     display: flex;
