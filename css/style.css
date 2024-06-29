@@ -28,28 +28,30 @@ section p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 2%;
 }
 
 .top-section {
-    background-color: black;
+    background: url('/assets/background.jpg') no-repeat center center;
+    background-size: cover;
     color: white;
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 5%;
+    padding-top: 5%;
     width: 100%;
 }
 
 .about-content {
     background-color: white;
     color: black;
-    padding: 20px;
+    padding: 2%;
     width: 100%;
 }
 
 .navbar {
     background-color: #2d2d2d;
     width: 20%;
-    padding-top: 20px;
+    padding-top: 2%;
     padding-left: 1%;
     box-sizing: border-box;
     position: fixed;
@@ -63,7 +65,7 @@ section p{
     color: white;
     background: none;
     border: none;
-    padding: 15px 20px;
+    padding: 5% 10%;
     cursor: pointer;
     font-size: 16px;
     text-align: left;
