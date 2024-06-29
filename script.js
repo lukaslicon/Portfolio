@@ -40,6 +40,7 @@ const App = () => {
                 <button onClick={() => handleScrollTo("projects")}>Projects</button>
                 <button onClick={() => handleScrollTo("education")}>Education</button>
                 <button onClick={() => handleScrollTo("contact")}>Contact</button>
+                <span className="navbar-email">lukas@licons.com</span>
             </div>
             <div className="content">
                 {/* Home*/}
@@ -92,12 +93,42 @@ const App = () => {
                         
                     </section>
                     {/* Education*/}
-                <section id="education" className="content-box education">
-                    <h2>Education</h2>
-                    <p>This contains education from Lukas.</p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
-                        </section>
+                    <section id="education" className="content-box education">
+                        <h2>Education</h2>
+                        <div className="education-item">
+                            <div className="education-logo">
+                                <img src="assets\ucsc logo.jpg" alt="School Logo" className="education-logo-img" />
+                            </div>
+                            <div className="education-description">
+                                <p>University of California, Santa Cruz, Graduated 2024</p>
+                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                                <p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p>
+                                {/* Add more paragraphs as needed */}
+                            </div>
+                        </div>
+                        <div className="education-item">
+                            <div className="education-logo">
+                                <img src="assets\COM-logo-color.png" alt="School Logo" className="education-logo-img" />
+                            </div>
+                            <div className="education-description">
+                                <p>College of Marin, 2019-2022, Associates Transfer in Computer Science</p>
+                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                                <p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p>
+                                {/* Add more paragraphs as needed */}
+                            </div>
+                        </div>
+                        <div className="education-item">
+                            <div className="education-logo">
+                                <img src="assets\tamiscal logo.png" alt="School Logo" className="education-logo-tamiscal" />
+                            </div>
+                            <div className="education-description">
+                                <p>High School, Class of 2019</p>
+                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                                <p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p>
+                                {/* Add more paragraphs as needed */}
+                            </div>
+                        </div>
+                    </section>
                     {/* Contact INFO*/}
                 <section id="contact" className="content-box contact">
                     <h2>Contact</h2>
