@@ -21,9 +21,14 @@
     background-color: #fff;
 }
 
-.content-box.projects {
+.content-box.Gprojects {
     background-color: #f5f5f5;
 }
+
+.content-box.Iprojects {
+    background-color: #eaeaea;
+}
+
 
 .content-box.education {
     background-color: #f0f0f0;

@@ -37,17 +37,10 @@ const App = () => {
         <div className="container">
             <div className="navbar">
                 <button onClick={() => handleScrollTo("home")}>Home</button>
-                <button onClick={() => handleScrollTo("projects")}>Projects</button>
+                <button onClick={() => handleScrollTo("group projects")}>Group Projects</button>
+                <button onClick={() => handleScrollTo("individual projects")}>Individual Projects</button>
                 <button onClick={() => handleScrollTo("education")}>Education</button>
                 <button onClick={() => handleScrollTo("contact")}>Contact</button>
-                <div className="resume-buttons">
-                    <a className="resume-button" href="resumes\LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">
-                        Web Resume
-                    </a>
-                    <a className="resume-button" href="resumes\LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">
-                        Game Resume
-                    </a>
-                </div>
                 <span className="navbar-email">lukas@licons.com</span>
             </div>
             <div className="content">
@@ -56,6 +49,14 @@ const App = () => {
                         <div class="top-section">
                             <h2>Lukas Daniel Licon</h2>
                             <p>Gameplay Programmer, Game Designer, Software Engineer</p>
+                            <div className="resume-buttons">
+                                <a className="resume-button" href="resumes\LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">
+                                    WebDev Resume
+                                </a>
+                                <a className="resume-button" href="resumes\LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">
+                                    GameDev Resume
+                                </a>
+                            </div>
                         </div>
                         {/*About Me*/}
                         <h2>About Me</h2>
@@ -74,7 +75,7 @@ const App = () => {
                         </div>
                     </section>
                 {/* Projects*/}
-                <section id="projects" className="content-box projects">
+                <section id="group projects" className="content-box Gprojects">
                     <h2>Group Projects</h2>
                     <p>This section contains a showcase about my Projects.</p>
                     <h3>Crabity</h3>
@@ -85,6 +86,9 @@ const App = () => {
                     <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
                     <h3>Prodedural City Generation</h3>
                     <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    </section>
+                {/* Individual Projects*/}
+                <section id="individual projects" className="content-box Iprojects">
                     <h2>Individual Projects</h2>
                     <h3>NavMesh Pathfinding</h3>
                     <p>IMG</p>
@@ -98,8 +102,8 @@ const App = () => {
                     <h3>Client-Server Robot State Machine in C++</h3>
                     <p>IMG</p>
                     <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
-                        
                     </section>
+                                    
                     {/* Education*/}
                     <section id="education" className="content-box education">
                         <h2>Education</h2>
