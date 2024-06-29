@@ -41,7 +41,7 @@ const App = () => {
                 <button onClick={() => handleScrollTo("education")}>Education</button>
                 <button onClick={() => handleScrollTo("contact")}>Contact</button>
                 <div className="resume-buttons">
-                    <a className="resume-button" href="resumes\LukasLicon-ResumeWeb.pdf" target="_blank" rel="noopener noreferrer">
+                    <a className="resume-button" href="resumes\LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">
                         Web Resume
                     </a>
                     <a className="resume-button" href="resumes\LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">
