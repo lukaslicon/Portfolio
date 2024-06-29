@@ -1,53 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    overflow-x: hidden;
-}
-
-section {
-    margin: 0;
-    padding: 0;
-}
-section h2{
-    margin: 0;
-    padding: 2%;
-}
-section p{
-    margin: 0;
-    padding: 2%;
-}
-.container {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-}
-
-#about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2%;
-}
-
-.top-section {
-    background: url('/assets/background.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    padding-bottom: 5%;
-    padding-top: 5%;
-    width: 100%;
-}
-
-.about-content {
-    background-color: white;
-    color: black;
-    padding: 2%;
-    width: 100%;
-}
-
 .navbar {
     background-color: #2d2d2d;
     width: 15%;
@@ -80,7 +30,7 @@ section p{
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    left: 10px;
+    left: 2%;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -91,7 +41,6 @@ section p{
 }
 
 .content {
-    flex: 1;
     margin-left: 15%;
     overflow-y: auto;
 }

@@ -6,20 +6,19 @@ const App = () => {
         const sections = document.querySelectorAll('section');
         const navButtons = document.querySelectorAll('.navbar button');
 
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const sectionId = entry.target.id;
-                navButtons.forEach((button) => {
-                    button.classList.toggle('active', button.textContent.toLowerCase() === sectionId);
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.id;
+                        navButtons.forEach((button) => {
+                            button.classList.toggle('active', button.textContent.toLowerCase() === sectionId);
+                        });
+                    }
                 });
-            }
-        });
-    },
-    { threshold: 0.5}
-);
-
+            },
+            { threshold: 0.3 }
+        );
 
         sections.forEach((section) => observer.observe(section));
 
@@ -53,19 +52,36 @@ const observer = new IntersectionObserver(
                     <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
                 </section>
                 <section id="projects" className="content-box projects">
-                    <h2>Projects</h2>
+                    <h2>Group Projects</h2>
                     <p>This section contains a showcase about my Projects.</p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
-
+                    <h3>Crabity</h3>
+                    <p>IMG</p>
+                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    <h3>Chromatic Conundrum</h3>
+                    <p>IMG</p>
+                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    <h3>Prodedural City Generation</h3>
+                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    <h2>Individual Projects</h2>
+                    <h3>NavMesh Pathfinding</h3>
+                    <p>IMG</p>
+                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    <h3>Ultimate TicTacToe Python Bot</h3>
+                    <p>IMG</p>
+                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    <h3>Planet Wars Python Bot</h3>
+                    <p>IMG</p>
+                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    <h3>Client-Server Robot State Machine in C++</h3>
+                    <p>IMG</p>
+                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    
                 </section>
                 <section id="education" className="content-box education">
                     <h2>Education</h2>
                     <p>This contains education from Lukas.</p>
                     <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
                     <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
-
                 </section>
                 <section id="contact" className="content-box contact">
                     <h2>Contact</h2>
@@ -73,8 +89,6 @@ const observer = new IntersectionObserver(
                     <p><a href="mailto:lukas@licons.com">Send Email</a></p>
                     <p><a href="https://www.linkedin.com/in/lukas-licon/">LinkedIn</a></p>
                     <p><a href="https://github.com/lukaslicon">Github</a></p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
                     <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
                     <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
                 </section>
