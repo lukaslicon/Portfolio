@@ -42,15 +42,29 @@ const App = () => {
                 <button onClick={() => handleScrollTo("contact")}>Contact</button>
             </div>
             <div className="content">
+                {/* Home*/}
                 <section id="home" className="content-box">
-                    <div class="top-section">
-                    <h2>Lukas Daniel Licon</h2>
-                    <p>Gameplay Programmer, Game Designer, Software Engineer</p>
-                    </div>
-                    <h2>About Me</h2>
-                    <p>This section is about who I am and what I do.</p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
-                </section>
+                        <div class="top-section">
+                            <h2>Lukas Daniel Licon</h2>
+                            <p>Gameplay Programmer, Game Designer, Software Engineer</p>
+                        </div>
+                        {/*About Me*/}
+                        <h2>About Me</h2>
+                        <div className="about-container">
+                            {/*Text about me*/}
+                            <div className="about-text">
+                                <p>This section is about who I am and what I do.</p>
+                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                                <p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p>
+                                <p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
+                            </div>
+                            {/*IMG about me*/}
+                            <div className="about-images">
+                                <img src="path_to_your_image.jpg" alt="Description of Image" className="about-image" />
+                            </div>
+                        </div>
+                    </section>
+                {/* Projects*/}
                 <section id="projects" className="content-box projects">
                     <h2>Group Projects</h2>
                     <p>This section contains a showcase about my Projects.</p>
@@ -75,23 +89,31 @@ const App = () => {
                     <h3>Client-Server Robot State Machine in C++</h3>
                     <p>IMG</p>
                     <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
-                    
-                </section>
+                        
+                    </section>
+                    {/* Education*/}
                 <section id="education" className="content-box education">
                     <h2>Education</h2>
                     <p>This contains education from Lukas.</p>
                     <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
                     <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
-                </section>
+                        </section>
+                    {/* Contact INFO*/}
                 <section id="contact" className="content-box contact">
                     <h2>Contact</h2>
                     <p>Feel free to contact me about any business inquiries.</p>
-                    <p><a href="mailto:lukas@licons.com">Send Email</a></p>
-                    <p><a href="https://www.linkedin.com/in/lukas-licon/">LinkedIn</a></p>
-                    <p><a href="https://github.com/lukaslicon">Github</a></p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p><p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p><p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
-                </section>
+                    <div class = "contact-group">
+                        <p><a href="mailto:lukas@licons.com"><img src="assets\email.png" alt="Email" className="contact-icon" /></a>
+                        <a href="https://www.linkedin.com/in/lukas-licon/"><img src="assets\In-Blue.png" alt="LinkedIn" className="contact-icon" /></a>
+                        <a href="https://github.com/lukaslicon"><img src="assets\github-mark.png" alt="Github" className="contact-icon" /> </a> </p>
+                        </div>
+                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores.</p>
+                    <p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente.</p>
+                    <p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum.</p>
+                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores.</p>
+                    <p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente.</p>
+                    <p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum.</p>
+                    </section>
             </div>
         </div>
     );
