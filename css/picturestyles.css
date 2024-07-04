@@ -1,0 +1,83 @@
+.education-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.education-logo {
+    flex: 1;
+    max-width: 30%; /* Adjust as per your design */
+}
+
+.education-logo-img {
+    width: 80%;
+    height: auto;
+    padding-left: 0;
+
+    
+}
+
+.education-logo-tamiscal {
+    width: 50%;
+    height: auto;
+    padding-left: 15%;
+
+    
+}
+
+.education-description {
+    flex: 2;
+}
+
+
+
+
+.iprojects-description {
+    flex: 2;
+}
+.iprojects-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.iprojects-logo {
+    flex: 1;
+    max-width: 30%; 
+}
+
+.iprojects-logo-img {
+    width: 80%;
+    height: auto;
+    padding-left: 0;
+
+    
+}
+
+
+
+
+.gprojects-description {
+    flex: 2;
+}
+.gprojects-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.gprojects-logo {
+    flex: 1;
+    max-width: 30%; 
+}
+
+.gprojects-logo-img {
+    width: 80%;
+    height: auto;
+    padding-left: 0;
+
+    
+}

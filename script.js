@@ -64,9 +64,6 @@ const App = () => {
                             {/*Text about me*/}
                             <div className="about-text">
                                 <p>This section is about who I am and what I do.</p>
-                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
-                                <p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p>
-                                <p>Hic laborum voluptatem est saepe quibusdam est officia magni et tenetur ipsam et voluptates consequatur non totam aperiam. Et vitae voluptas aut voluptatem molestiae in cumque harum et doloribus soluta. Non dolorem consequatur vel tempore repellat non accusantium iusto. Quo commodi voluptatem sed consequatur Quis qui adipisci delectus et porro voluptas et debitis rerum. </p>
                             </div>
                             {/*IMG about me*/}
                             <div className="about-images">
@@ -78,30 +75,74 @@ const App = () => {
                 <section id="group projects" className="content-box Gprojects">
                     <h2>Group Projects</h2>
                     <p>This section contains a showcase about my Projects.</p>
-                    <h3>Crabity</h3>
-                    <p>IMG</p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    <h3>Crabity</h3> 
+                    <p9><a href="https://www.linkedin.com/in/lukas-licon/"> Link to Steam</a></p9> 
+                    <div className="gprojects-item">
+                        <div className="gprojects-logo">
+                                <img src="assets\crabity screenshot.png" alt="Crabity Logo" className="gprojects-logo-img" />
+                            </div>
+                        <div className="gprojects-description">
+                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                            </div>
+                        </div>
                     <h3>Chromatic Conundrum</h3>
-                    <p>IMG</p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    <div className="gprojects-item">
+                        <div className="gprojects-logo">
+                                <img src="assets\crabity screenshot.png" alt="Chromatic" className="gprojects-logo-img" />
+                            </div>
+                        <div className="gprojects-description">
+                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                            </div>
+                        </div>
                     <h3>Prodedural City Generation</h3>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    <div className="gprojects-item">
+                        <div className="gprojects-logo">
+                                <img src="assets\crabity screenshot.png" alt="ProcGen City" className="gprojects-logo-img" />
+                            </div>
+                        <div className="gprojects-description">
+                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                            </div>
+                        </div>
                     </section>
                 {/* Individual Projects*/}
                 <section id="individual projects" className="content-box Iprojects">
                     <h2>Individual Projects</h2>
                     <h3>NavMesh Pathfinding</h3>
-                    <p>IMG</p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    <div className="iprojects-item">
+                        <div className="iprojects-description">
+                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                            </div>
+                        <div className="iprojects-logo">
+                                <img src="assets\crabity screenshot.png" alt="NavMesh Pathfinding" className="iprojects-logo-img" />
+                            </div>
+                        </div>
                     <h3>Ultimate TicTacToe Python Bot</h3>
-                    <p>IMG</p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    <div className="iprojects-item">
+                        <div className="iprojects-description">
+                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                            </div>
+                        <div className="iprojects-logo">
+                                <img src="assets\crabity screenshot.png" alt="NavMesh Pathfinding" className="iprojects-logo-img" />
+                            </div>
+                        </div>
                     <h3>Planet Wars Python Bot</h3>
-                    <p>IMG</p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    <div className="iprojects-item">
+                        <div className="iprojects-description">
+                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                            </div>
+                        <div className="iprojects-logo">
+                                <img src="assets\crabity screenshot.png" alt="NavMesh Pathfinding" className="iprojects-logo-img" />
+                            </div>
+                        </div>
                     <h3>Client-Server Robot State Machine in C++</h3>
-                    <p>IMG</p>
-                    <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                    <div className="iprojects-item">
+                        <div className="iprojects-description">
+                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                            </div>
+                        <div className="iprojects-logo">
+                                <img src="assets\crabity screenshot.png" alt="NavMesh Pathfinding" className="iprojects-logo-img" />
+                            </div>
+                        </div>
                     </section>
                                     
                 {/* Education*/}
@@ -115,7 +156,6 @@ const App = () => {
                                 <p>University of California, Santa Cruz, Graduated 2024</p>
                                 <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
                                 <p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p>
-                                {/* Add more paragraphs as needed */}
                             </div>
                         </div>
                         <div className="education-item">
@@ -126,7 +166,6 @@ const App = () => {
                                 <p>College of Marin, 2019-2022, Associates Transfer in Computer Science</p>
                                 <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
                                 <p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p>
-                                {/* Add more paragraphs as needed */}
                             </div>
                         </div>
                         <div className="education-item">
@@ -137,7 +176,6 @@ const App = () => {
                                 <p>High School, Class of 2019</p>
                                 <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
                                 <p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente. </p>
-                                {/* Add more paragraphs as needed */}
                             </div>
                         </div>
                 </section>
