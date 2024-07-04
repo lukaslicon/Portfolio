@@ -104,8 +104,8 @@ const App = () => {
                     <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
                     </section>
                                     
-                    {/* Education*/}
-                    <section id="education" className="content-box education">
+                {/* Education*/}
+                <section id="education" className="content-box education">
                         <h2>Education</h2>
                         <div className="education-item">
                             <div className="education-logo">
@@ -140,8 +140,8 @@ const App = () => {
                                 {/* Add more paragraphs as needed */}
                             </div>
                         </div>
-                    </section>
-                    {/* Contact INFO*/}
+                </section>
+                {/* Contact INFO*/}
                 <section id="contact" className="content-box contact">
                     <h2>Contact</h2>
                     <div class = "contact-group">
