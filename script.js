@@ -113,7 +113,7 @@ const App = () => {
                     <p9><a href="https://github.com/lukaslicon/CMPM146-P1"> Link to Github</a></p9> 
                     <div className="iprojects-item">
                         <div className="iprojects-description">
-                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                                <p>This Python project implements a bidirectional A* search algorithm to find paths in navmeshes created from user-provided images. The program takes an image and its corresponding navmesh representation as input and outputs an image showing the path from a source to a destination point defined interactively. </p>
                             </div>
                         <div className="iprojects-logo">
                                 <img src="assets\crabity screenshot.png" alt="NavMesh Pathfinding" className="iprojects-logo-img" />
