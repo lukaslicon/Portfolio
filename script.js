@@ -120,7 +120,7 @@ const App = () => {
                             </div>
                         </div>
                     <h3>Ultimate TicTacToe Python Bot</h3>
-                    <p9><a href="https://github.com/Procedural-BananaSlug-Studios/PCG-City-Generator"> Link to Github</a></p9> 
+                    <p9><a href="https://github.com/lukaslicon/P2_MCTS-Tic-Tac-Toe"> Link to Github</a></p9> 
                     <div className="iprojects-item">
                         <div className="iprojects-description">
                                 <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
