@@ -76,7 +76,7 @@ const App = () => {
                     <h2>Group Projects</h2>
                     <p>This section contains a showcase about my Projects.</p>
                     <h3>Crabity</h3> 
-                    <p9><a href="https://www.linkedin.com/in/lukas-licon/"> Link to Steam</a></p9> 
+                    <p9><a href="https://store.steampowered.com/app/2988850/Crabity/"> Link to Steam</a></p9> 
                     <div className="gprojects-item">
                         <div className="gprojects-logo">
                                 <img src="assets\crabity screenshot.png" alt="Crabity Logo" className="gprojects-logo-img" />
@@ -96,6 +96,7 @@ const App = () => {
                             </div>
                         </div>
                     <h3>Prodedural City Generation</h3>
+                    <p9><a href="https://github.com/Procedural-BananaSlug-Studios/PCG-City-Generator"> Link to Github</a></p9> 
                     <div className="gprojects-item">
                         <div className="gprojects-logo">
                                 <img src="assets\crabity screenshot.png" alt="ProcGen City" className="gprojects-logo-img" />
