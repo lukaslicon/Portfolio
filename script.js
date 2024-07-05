@@ -123,7 +123,7 @@ const App = () => {
                     <p9><a href="https://github.com/CZarko/P2"> Link to Github</a></p9> 
                     <div className="iprojects-item">
                         <div className="iprojects-description">
-                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
+                                <p>This project involves creating a bot that plays Ultimate Tic-Tac-Toe using Monte Carlo Tree Search (MCTS) in Python. Ultimate Tic-Tac-Toe is an advanced version of the classic Tic-Tac-Toe game where players play on a grid of 9 smaller Tic-Tac-Toe boards to complete a giant row, column, or diagonal. The MCTS bot will be evaluated through various experiments to ensure its effectiveness and performance.</p>
                             </div>
                         <div className="iprojects-logo">
                                 <img src="assets\crabity screenshot.png" alt="NavMesh Pathfinding" className="iprojects-logo-img" />
