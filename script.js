@@ -86,6 +86,7 @@ const App = () => {
                             </div>
                         </div>
                     <h3>Chromatic Conundrum</h3>
+                    <p9><a href="https://ernaniraffo.itch.io/chromatic-tower-defense"> Link to itch.io</a></p9> 
                     <div className="gprojects-item">
                         <div className="gprojects-logo">
                                 <img src="assets\crabity screenshot.png" alt="Chromatic" className="gprojects-logo-img" />
