@@ -110,7 +110,7 @@ const App = () => {
                 <section id="individual projects" className="content-box Iprojects">
                     <h2>Individual Projects</h2>
                     <h3>NavMesh Pathfinding</h3>
-                    <p9><a href="https://github.com/Procedural-BananaSlug-Studios/PCG-City-Generator"> Link to Github</a></p9> 
+                    <p9><a href="https://github.com/lukaslicon/CMPM146-P1"> Link to Github</a></p9> 
                     <div className="iprojects-item">
                         <div className="iprojects-description">
                                 <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores. </p>
