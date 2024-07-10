@@ -81,12 +81,22 @@ const App = () => {
                         <div className="gprojects-logo">
                                 <img src="assets\crabity screenshot.png" alt="Crabity Logo" className="gprojects-logo-img" />
                             </div>
-                        <div className="gprojects-description">
-                            <div className="gprojects-description">
-                            <p>Embark on a cosmic adventure as a duo of two robot crabs stranded in the vastness of space. See the world from a different angle and utilize the power of gravity to escape the space station and return back to Earth!</p>
+                        <div className="gprojects-box">
+                            <div className="gprojects-title">
+                                <p>Project Description</p>
                                 </div>
+                            <div className="gprojects-description">
                                 <p>Embark on a cosmic adventure as a duo of two robot crabs stranded in the vastness of space. See the world from a different angle and utilize the power of gravity to escape the space station and return back to Earth!</p>
-                            </div>
+                                </div>
+                        </div>
+                        <div className="gprojects-box">
+                            <div className="gprojects-title">
+                                <p>Contributions</p>
+                                </div>
+                            <div className="gprojects-contributions">
+                                <p>-Created daily generated maps using weighted pathfinding and procedural generation based on movement.</p>
+                                </div>
+                        </div>
                         </div>
                     <h3>Chromatic Conundrum</h3>
                     <p9><a href="https://ernaniraffo.itch.io/chromatic-tower-defense"> Link to itch.io</a></p9> 
