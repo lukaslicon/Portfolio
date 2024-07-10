@@ -71,7 +71,7 @@ const App = () => {
                             </div>
                         </div>
                     </section>
-                {/* Projects*/}
+                {/* Group Projects*/}
                 <section id="group projects" className="content-box Gprojects">
                     <h2>Group Projects</h2>
                     <p>This section contains a showcase about my Projects.</p>

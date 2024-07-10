@@ -51,9 +51,7 @@
 .iprojects-logo-img {
     width: 80%;
     height: auto;
-    padding-left: 0;
-
-    
+    padding-left: 0; 
 }
 
 .gprojects-box{
@@ -62,6 +60,9 @@
 
 .gprojects-title {
     flex: 1;
+    padding-top: 0;
+    padding-bottom: 1%;
+    margin-top: 0;
 }
 .gprojects-description {
     flex: 1;
