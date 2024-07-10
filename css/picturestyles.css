@@ -61,6 +61,11 @@
 
 .gprojects-description {
     flex: 2;
+    align-items: left;
+}
+.gprojects-contributions {
+    flex: 2;
+    align-items: right;
 }
 .gprojects-item {
     display: flex;
