@@ -1,75 +1,6 @@
-.education-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
 
-.education-logo {
-    flex: 1;
-    max-width: 30%; /* Adjust as per your design */
-}
-
-.education-logo-img {
-    width: 80%;
-    height: auto;
-    padding-left: 0;
-
-    
-}
-
-.education-logo-tamiscal {
-    width: 50%;
-    height: auto;
-    padding-left: 15%;
-
-    
-}
-
-.education-description {
-    flex: 2;
-}
-
-
-
-
-.iprojects-description {
-    flex: 2;
-}
-.iprojects-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.iprojects-logo {
-    flex: 1;
-    max-width: 30%; 
-}
-
-.iprojects-logo-img {
-    width: 80%;
-    height: auto;
-    padding-left: 0; 
-}
-
-.gprojects-box{
-    flex: 2;
-}
-
-.gprojects-title {
-    flex: 1;
-    padding-top: 0;
-    padding-bottom: 1%;
-    margin-top: 0;
-}
-.gprojects-description {
-    flex: 1;
-}
-.gprojects-contributions {
-    flex: 1;
-}
+.education-item,
+.iprojects-item,
 .gprojects-item {
     display: flex;
     align-items: center;
@@ -77,15 +8,93 @@
     padding: 20px;
 }
 
+.education-logo,
+.iprojects-logo,
 .gprojects-logo {
-    flex: 2;
-    max-width: 30%; 
+    flex: 1;
+    max-width: 30%; /* Adjust as per your design */
 }
 
+.education-logo-img,
+.iprojects-logo-img,
 .gprojects-logo-img {
     width: 80%;
     height: auto;
     padding-left: 0;
+}
 
-    
+.education-logo-tamiscal {
+    width: 50%;
+    height: auto;
+    padding-left: 15%;
+}
+
+.education-description,
+.iprojects-description,
+.gprojects-box,
+.gprojects-title,
+.gprojects-description,
+.gprojects-contributions {
+    flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .navbar button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .navbar-email {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .contact-group {
+        flex-direction: column;
+    }
+
+    .education-item,
+    .iprojects-item,
+    .gprojects-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .education-logo,
+    .iprojects-logo,
+    .gprojects-logo {
+        max-width: 100%;
+    }
+
+    .education-logo-img,
+    .iprojects-logo-img,
+    .gprojects-logo-img {
+        width: 100%;
+    }
+
+    .resume-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
