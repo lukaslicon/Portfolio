@@ -68,7 +68,7 @@ const App = () => {
                                 <p>Beyond my technical skills, I am driven by a collaborative spirit and a desire to continuously learn and grow. Working with cross-functional teams has taught me the importance of communication and teamwork in achieving project goals. I am committed to staying updated with the latest industry trends and technologies, always seeking new knowledge to enhance my craft. My goal is to use my skills and experiences to create innovative solutions that entertain, educate, and empower users, contributing to a future where technology and creativity intersect to make a positive impact.</p>
                             </div>
                             {/*IMG about me*/}
-                            <div className="about-images">
+                            <div className="about-image">
                                 <img src="assets\profile.jpg" alt="Profile Image" className="about-image" />
                             </div>
                         </div>

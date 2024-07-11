@@ -53,8 +53,11 @@
 }
 
 .about-image {
-    padding-bottom: 10%;
-    width: 55%;
+    width:100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-images {
@@ -64,6 +67,7 @@
     align-items: center;
 }
 
+.about-
 
 
 .contact-group {
