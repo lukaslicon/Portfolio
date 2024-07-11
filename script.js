@@ -85,7 +85,7 @@ const App = () => {
                             </div>
                         <div className="gprojects-box">
                             <div className="gprojects-title">
-                                <p>Project Description</p>
+                                <h2>Project Description</h2>
                                 </div>
                             <div className="gprojects-description">
                                 <p>Embark on a cosmic adventure as a duo of two robot crabs stranded in the vastness of space. See the world from a different angle and utilize the power of gravity to escape the space station and return back to Earth!</p>
