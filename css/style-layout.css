@@ -29,7 +29,6 @@
     background-color: #eaeaea;
 }
 
-
 .content-box.education {
     background-color: #f0f0f0;
 }
@@ -53,7 +52,7 @@
 }
 
 .about-image {
-    width:100%;
+    width: 100%;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -67,9 +66,6 @@
     align-items: center;
 }
 
-.about-
-
-
 .contact-group {
     display: flex;
     justify-content: center;
@@ -81,4 +77,3 @@
     height: 150px;
     margin: 5px 50px; 
 }
-

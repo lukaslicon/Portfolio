@@ -17,7 +17,7 @@
     border: none;
     padding: 5% 10%;
     cursor: pointer;
-    font-size: 16px;
+    font-size: calc(2.1px + 1vw);
     text-align: left;
     position: relative;
     transition: background-color 0.3s ease;
@@ -38,6 +38,7 @@
 .navbar button:hover::before,
 .navbar button.active::before {
     opacity: 1;
+    
 }
 
 .navbar-email {
@@ -70,12 +71,4 @@
 
 .resume-button:hover {
     background-color: #0056b3;
-}
-.navbar-email {
-    position: absolute;
-    bottom: 10px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 14px;
-    color: white;
 }
