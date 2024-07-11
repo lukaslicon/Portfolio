@@ -41,3 +41,27 @@ section p9{
     padding-left: 1%;
     padding-bottom: 1%;
 }
+
+
+
+.resume-buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 20px; /* Space between the buttons */
+    margin-bottom: 20px; /* Adjust as needed for spacing */
+}
+
+.resume-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #0056b3;
+}
