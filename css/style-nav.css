@@ -6,6 +6,12 @@
     box-sizing: border-box;
     position: fixed;
     height: 100%;
+    transition: width 0.3s ease;
+}
+
+.navbar-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar button {
@@ -38,7 +44,6 @@
 .navbar button:hover::before,
 .navbar button.active::before {
     opacity: 1;
-    
 }
 
 .navbar-email {
@@ -51,24 +56,92 @@
     color: white; 
 }
 
-.resume-buttons {
-    display: flex;
-    justify-content: center; /* Center the buttons horizontally */
-    gap: 20px; /* Space between the buttons */
-    margin-bottom: 20px; /* Adjust as needed for spacing */
-}
-
-.resume-button {
-    padding: 10px 20px;
-    background-color: #007bff;
+.navbar-toggle {
+    display: none;
     color: white;
-    text-decoration: none;
+    font-size: 30px;
+    background: none;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
-.resume-button:hover {
-    background-color: #0056b3;
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        position: relative;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-content {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2d2d2d;
+    }
+
+    .navbar-content.active {
+        display: flex;
+    }
+
+    .navbar button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .navbar-email {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .contact-group {
+        flex-direction: column;
+    }
+
+    .education-item,
+    .iprojects-item,
+    .gprojects-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .education-logo,
+    .iprojects-logo,
+    .gprojects-logo {
+        max-width: 100%;
+    }
+
+    .education-logo-img,
+    .iprojects-logo-img,
+    .gprojects-logo-img {
+        width: 100%;
+    }
+
+    .resume-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }

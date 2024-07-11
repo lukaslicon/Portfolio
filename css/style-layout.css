@@ -1,79 +1,65 @@
-.container {
-    height: 100vh;
-}
-
-.top-section {
-    background: url('/assets/citytech.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    padding-bottom: 2%;
-    padding-top: 2%;
-    width: 100%;
-}
-
-.content {
-    margin-left: 15%;
-    overflow-y: auto;
-}
-
-.content-box {
-    background-color: #fff;
-}
-
-.content-box.Gprojects {
-    background-color: #f5f5f5;
-}
-
-.content-box.Iprojects {
-    background-color: #eaeaea;
-}
-
-.content-box.education {
-    background-color: #f0f0f0;
-}
-
-.content-box.contact {
-    background-color: #e5e5e5;
-    padding-bottom: 20%;
-}
-
-.about-container {
+.education-item,
+.iprojects-item,
+.gprojects-item {
     display: flex;
-    padding-left: 1%;
-    padding-right: 2%;
-    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-.about-text {
+.education-logo,
+.iprojects-logo,
+.gprojects-logo {
     flex: 1;
-    padding-right: 2%;
+    max-width: 30%; /* Adjust as per your design */
+}
+
+.education-logo-img,
+.iprojects-logo-img,
+.gprojects-logo-img {
+    width: 80%;
+    height: auto;
     padding-left: 0;
 }
 
-.about-image {
-    width: 100%;
+.education-logo-tamiscal {
+    width: 50%;
+    height: auto;
+    padding-left: 15%;
+}
+
+.education-description,
+.iprojects-description,
+.gprojects-box,
+.gprojects-title,
+.gprojects-description,
+.gprojects-contributions {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.about-images {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@media screen and (max-width: 768px) {
+    .education-item,
+    .iprojects-item,
+    .gprojects-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.contact-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .education-logo,
+    .iprojects-logo,
+    .gprojects-logo {
+        max-width: 100%;
+    }
 
-.contact-icon {
-    width: 150px;
-    height: 150px;
-    margin: 5px 50px; 
+    .education-logo-img,
+    .iprojects-logo-img,
+    .gprojects-logo-img {
+        width: 100%;
+    }
+
+    .resume-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
