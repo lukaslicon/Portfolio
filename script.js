@@ -89,7 +89,7 @@ const App = () => {
                     <h2>Group Projects</h2>
                     <p>This section contains a showcase about my Projects.</p>
                     <h3>Crabity</h3>
-                    <p9><a href="https://store.steampowered.com/app/2988850/Crabity/"> Link to Steam</a></p9>
+                    <h5><a href="https://store.steampowered.com/app/2988850/Crabity/"> Link to Steam</a></h5>
                     <div className="gprojects-item">
                         <div className="gprojects-logo">
                             <img src="assets\crabity screenshot.png" alt="Crabity Logo" className="gprojects-logo-img" />
@@ -112,7 +112,7 @@ const App = () => {
                         </div>
                     </div>
                     <h3>Chromatic Conundrum</h3>
-                    <p9><a href="https://ernaniraffo.itch.io/chromatic-tower-defense"> Link to itch.io</a></p9>
+                    <h5><a href="https://ernaniraffo.itch.io/chromatic-tower-defense"> Link to itch.io</a></h5>
                     <div className="gprojects-item">
                         <div className="gprojects-logo">
                             <img src="assets\crabity screenshot.png" alt="Chromatic" className="gprojects-logo-img" />
@@ -123,7 +123,7 @@ const App = () => {
                         </div>
                     </div>
                     <h3>Procedural City Generation</h3>
-                    <p9><a href="https://github.com/Procedural-BananaSlug-Studios/PCG-City-Generator"> Link to Github</a></p9>
+                    <h5><a href="https://github.com/Procedural-BananaSlug-Studios/PCG-City-Generator"> Link to Github</a></h5>
                     <div className="gprojects-item">
                         <div className="gprojects-logo">
                             <img src="assets\crabity screenshot.png" alt="ProcGen City" className="gprojects-logo-img" />
@@ -137,7 +137,7 @@ const App = () => {
                 <section id="individual projects" className="content-box Iprojects">
                     <h2>Individual Projects</h2>
                     <h3>NavMesh Pathfinding</h3>
-                    <p9><a href="https://github.com/lukaslicon/CMPM146-P1"> Link to Github</a></p9>
+                    <h5><a href="https://github.com/lukaslicon/CMPM146-P1"> Link to Github</a></h5>
                     <div className="iprojects-item">
                         <div className="iprojects-description">
                             <p>This Python project implements a bidirectional A* search algorithm to find paths in navmeshes created from user-provided images. The program takes an image and its corresponding navmesh representation as input and outputs an image showing the path from a source to a destination point defined interactively.</p>
@@ -147,7 +147,7 @@ const App = () => {
                         </div>
                     </div>
                     <h3>Ultimate TicTacToe Python Bot</h3>
-                    <p9><a href="https://github.com/CZarko/P2"> Link to Github</a></p9>
+                    <h5><a href="https://github.com/CZarko/P2"> Link to Github</a></h5>
                     <div className="iprojects-item">
                         <div className="iprojects-description">
                             <p>This project involves creating a bot that plays Ultimate Tic-Tac-Toe using Monte Carlo Tree Search (MCTS) in Python. Ultimate Tic-Tac-Toe is an advanced version of the classic Tic-Tac-Toe game where players play on a grid of 9 smaller Tic-Tac-Toe boards to complete a giant row, column, or diagonal. The MCTS bot will be evaluated through various experiments to ensure its effectiveness and performance.</p>
@@ -157,7 +157,7 @@ const App = () => {
                         </div>
                     </div>
                     <h3>Planet Wars Python Bot</h3>
-                    <p9><a href="https://github.com/lukaslicon/P3-Behavior-Trees-for-Planet-Wars"> Link to Github</a></p9>
+                    <h5><a href="https://github.com/lukaslicon/P3-Behavior-Trees-for-Planet-Wars"> Link to Github</a></h5>
                     <div className="iprojects-item">
                         <div className="iprojects-description">
                             <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores.</p>
@@ -167,7 +167,7 @@ const App = () => {
                         </div>
                     </div>
                     <h3>Client-Server Robot State Machine in C++</h3>
-                    <p9><a href="https://github.com/lukaslicon/robotStateMachine"> Link to Github</a></p9>
+                    <h5><a href="https://github.com/lukaslicon/robotStateMachine"> Link to Github</a></h5>
                     <div className="iprojects-item">
                         <div className="iprojects-description">
                             <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores.</p>
