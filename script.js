@@ -63,7 +63,9 @@ const App = () => {
                         <div className="about-container">
                             {/*Text about me*/}
                             <div className="about-text">
-                                <p>This section is about who I am and what I do.</p>
+                                <p>Hello, I'm Lukas Licon, a passionate software engineer and game designer with a Bachelor's degree in Computer Science: Computer Game Design from UC Santa Cruz. My fascination with technology and video games began at a young age, fueled by countless hours immersed in MMORPGs like World of Warcraft. This early passion evolved into a career ambition to create immersive and engaging game experiences that captivate players as I was once captivated.</p>
+                                <p></p>
+                                <p>Beyond my technical skills, I am driven by a collaborative spirit and a desire to continuously learn and grow. Working with cross-functional teams has taught me the importance of communication and teamwork in achieving project goals. I am committed to staying updated with the latest industry trends and technologies, always seeking new knowledge to enhance my craft. My goal is to use my skills and experiences to create innovative solutions that entertain, educate, and empower users, contributing to a future where technology and creativity intersect to make a positive impact.</p>
                             </div>
                             {/*IMG about me*/}
                             <div className="about-images">
