@@ -87,7 +87,6 @@ const App = () => {
                 {/* Group Projects */}
                 <section id="group projects" className="content-box Gprojects">
                     <h2>Group Projects</h2>
-                    <p>This section contains a showcase about my Projects.</p>
                     <h3>Crabity</h3>
                     <h5><a href="https://store.steampowered.com/app/2988850/Crabity/"> Link to Steam</a></h5>
                     <div className="gprojects-item">

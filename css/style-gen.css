@@ -19,7 +19,7 @@ section h3{
     margin: 0;
     padding-top: 2%;
     padding-left: 2%;
-    font-size: 20px;
+    font-size: 30px;
     color: red;
     display: inline;
 }
@@ -38,9 +38,10 @@ section p{
 
 section h5{
     margin: 0;
-    padding-left: 1%;
+    padding-left: 2%;
     padding-bottom: 1%;
     color:black;
+    font-size: 15px;
 }
 
 .resume-buttons {
