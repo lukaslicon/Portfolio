@@ -68,7 +68,7 @@
         padding: 10px;
         position: relative;
     }
-
+    
     .navbar-toggle {
         display: block; /* Show the hamburger on small screens */
         color: white;
@@ -76,27 +76,29 @@
         background: none;
         border: none;
         cursor: pointer;
-        padding: 10px;
+        padding: 1%;
         position: absolute;
-        top: 10px;
-        left: 10px;
+        top: 1%;
+        left: 1.5%;
     }
 
     .navbar-content {
         display: none; /* Hide navigation content on smaller screens by default */
-        align-items: center;
-        text-align: center;
-        position: center;
     }
 
     .navbar-content.active {
         display: flex;
+        flex-direction: row;
     }
 
     .navbar button {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
+        display: flex;
+        color: white;
+        padding: 1% 5%;
+        font-size: calc(2.1px + 1.5vw);
+        text-align: left;
+        position: relative;
+        transition: background-color 0.3s ease;
     }
 
     .navbar-email {
@@ -145,6 +147,14 @@
         align-items: center;
         gap: 10px;
     }
+
+    .navbar button:hover::before,
+    .navbar button.active::before {
+        opacity: 0;
+    }
+    
+
+
 }
 
 @media screen and (min-width: 769px) {
