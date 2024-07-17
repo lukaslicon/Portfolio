@@ -23,9 +23,9 @@
 }
 
 .education-logo-tamiscal {
-    width: 50%;
+    width: 60%;
     height: auto;
-    padding-left: 15%;
+    padding-left: 10%;
 }
 
 .education-description,
@@ -56,6 +56,11 @@
     .gprojects-logo-img {
         width: 100%;
     }
+    .education-logo-tamiscal {
+        width: 100%;
+        height: auto;
+    }
+    
 
     .resume-buttons {
         flex-direction: column;
