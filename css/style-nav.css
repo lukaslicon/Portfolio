@@ -1,6 +1,6 @@
 .navbar {
     background-color: #2d2d2d;
-    width: 15%;
+    width: 10%;
     padding-top: 2%;
     padding-left: 1%;
     box-sizing: border-box;
@@ -94,9 +94,9 @@
     .navbar button {
         display: flex;
         color: white;
-        padding: 1% 5%;
+        padding: 2% 5%;
         font-size: calc(2.1px + 1.5vw);
-        text-align: left;
+
         position: relative;
         transition: background-color 0.3s ease;
     }
@@ -106,7 +106,7 @@
         bottom: auto;
         left: auto;
         transform: none;
-        padding-bottom: 10px;
+        padding-bottom: 2%;
         text-align: center;
     }
 
@@ -142,4 +142,6 @@
     .navbar-toggle {
         display: none; /* Ensure hamburger is hidden on larger screens */
     }
+    
+
 }
