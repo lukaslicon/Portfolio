@@ -14,7 +14,7 @@
     flex-direction: column;
 }
 
-.navbar button {
+.navbar-content button {
     display: flex;
     align-items: center;
     width: 100%;
@@ -82,12 +82,11 @@
         left: 10px;
     }
 
-
     .navbar-content {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #2d2d2d;
+        display: none; /* Hide navigation content on smaller screens by default */
+        align-items: center;
+        text-align: center;
+        position: center;
     }
 
     .navbar-content.active {
