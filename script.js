@@ -79,8 +79,21 @@ const App = () => {
                         <div className="gprojects-logo">
                             <img src="assets\crabity screenshot.png" alt="ProcGen City" className="gprojects-logo-img" />
                         </div>
-                        <div className="gprojects-description">
+                        <div className="gprojects-box">
+                            <div className="gprojects-title">
+                                <h4>Project Description</h4>
+                            </div>
+                            <div className="gprojects-description">
                             <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores.</p>
+                            </div>
+                        </div>
+                        <div className="gprojects-box">
+                            <div className="gprojects-title">
+                                <h4>Contributions</h4>
+                            </div>
+                            <div className="gprojects-contributions">
+                            <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores.</p>
+                            </div>
                         </div>
                     </div>
                 </section>
