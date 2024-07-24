@@ -199,7 +199,7 @@ const App = () => {
                 {renderSection()}
             </div>
             <div className="footer">
-                <p>Footer content goes here.</p>
+                <p>lukas@licons.com</p>
             </div>
         </div>
     );
