@@ -3,9 +3,7 @@
 }
 
 .top-section {
-    background: url('/assets/citytech.jpg') no-repeat center center;
     background-size: cover;
-    color: white;
     text-align: center;
     padding-bottom: 2%;
     padding-top: 2%;
@@ -13,7 +11,6 @@
 }
 
 .content {
-    margin-left: 10%;
     overflow-y: auto;
 }
 
@@ -77,14 +74,3 @@
     height: 150px;
     margin: 5px 50px; 
 }
-
-
-
-
-@media screen and (max-width: 768px) {
-    .content {
-        margin-left: 0;
-        overflow-y: auto;
-    }
-}
-    

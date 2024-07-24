@@ -1,91 +1,31 @@
-const { useEffect, useState } = React;
+const { useState } = React;
 const { createRoot } = ReactDOM;
 
 const App = () => {
-    const [isNavOpen, setIsNavOpen] = useState(false);
+    const [currentSection, setCurrentSection] = useState('about');
 
-    useEffect(() => {
-        const sections = document.querySelectorAll('section');
-        const navButtons = document.querySelectorAll('.navbar button');
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const sectionId = entry.target.id;
-                        navButtons.forEach((button) => {
-                            button.classList.toggle('active', button.textContent.toLowerCase() === sectionId);
-                        });
-                    }
-                });
-            },
-            { threshold: 0.3 }
-        );
-
-        sections.forEach((section) => observer.observe(section));
-
-        return () => {
-            sections.forEach((section) => observer.unobserve(section));
-        };
-    }, []);
-
-    const handleScrollTo = (section) => {
-        document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
-        window.history.pushState(null, '', `#${section}`);
-        setIsNavOpen(false); // Close the navbar on mobile after clicking
-    };
-
-    const toggleNavbar = () => {
-        setIsNavOpen(!isNavOpen);
-    };
-
-    return (
-        <div className="container">
-            <div className="navbar">
-                <button className="navbar-toggle" id="navbar-toggle" onClick={toggleNavbar}>
-                    &#9776;
-                </button>
-                <div className={`navbar-content ${isNavOpen ? 'active' : ''}`} id="navbar-content">
-                    <button onClick={() => handleScrollTo("home")}>Home</button>
-                    <button onClick={() => handleScrollTo("group projects")}>Group Projects</button>
-                    <button onClick={() => handleScrollTo("individual projects")}>Individual Projects</button>
-                    <button onClick={() => handleScrollTo("education")}>Education</button>
-                    <button onClick={() => handleScrollTo("contact")}>Contact</button>
-                </div>
-                <span className="navbar-email">lukas@licons.com</span>
-            </div>
-            <div className="content">
-                {/* Home */}
-                <section id="home" className="content-box">
-                    <div className="top-section">
-                        <h2>Lukas Daniel Licon</h2>
-                        <p>Gameplay Programmer, Game Designer, Software Engineer</p>
-                        <div className="resume-buttons">
-                            <a className="resume-button" href="resumes\LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">
-                                WebDev Resume
-                            </a>
-                            <a className="resume-button" href="resumes\LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">
-                                GameDev Resume
-                            </a>
+    const renderSection = () => {
+        switch (currentSection) {
+            case 'about':
+                return (
+                    <section id="home" className="content-box">
+                        <h2>About Me</h2>
+                        <div className="about-container">
+                            <div className="about-text">
+                                <p>Hello, I'm Lukas Licon, a passionate software engineer and game designer with a Bachelor's degree in Computer Science: Computer Game Design from UC Santa Cruz. My fascination with technology and video games began at a young age, fueled by countless hours immersed in MMORPGs like World of Warcraft. This early passion evolved into a career ambition to create immersive and engaging game experiences that captivate players as I was once captivated.</p>
+                                <p>My academic journey has been a blend of rigorous coursework and hands-on projects that have equipped me with a solid foundation in programming and game development. Each project has been a step forward in my journey, shaping my technical abilities and creative vision.</p>
+                                <p>Beyond my technical skills, I am driven by a collaborative spirit and a desire to continuously learn and grow. Working with cross-functional teams has taught me the importance of communication and teamwork in achieving project goals. I am committed to staying updated with the latest industry trends and technologies, always seeking new knowledge to enhance my craft. My goal is to use my skills and experiences to create innovative solutions that entertain, educate, and empower users, contributing to a future where technology and creativity intersect to make a positive impact.</p>
+                            </div>
+                            {/* IMG about me */}
+                            <div className="about-image">
+                                <img src="assets\profile.jpg" alt="Profile Image" className="about-image" />
+                            </div>
                         </div>
-                    </div>
-                    {/* About Me */}
-                    <h2>About Me</h2>
-                    <div className="about-container">
-                        {/* Text about me */}
-                        <div className="about-text">
-                            <p>Hello, I'm Lukas Licon, a passionate software engineer and game designer with a Bachelor's degree in Computer Science: Computer Game Design from UC Santa Cruz. My fascination with technology and video games began at a young age, fueled by countless hours immersed in MMORPGs like World of Warcraft. This early passion evolved into a career ambition to create immersive and engaging game experiences that captivate players as I was once captivated.</p>
-                            <p>My academic journey has been a blend of rigorous coursework and hands-on projects that have equipped me with a solid foundation in programming and game development. Each project has been a step forward in my journey, shaping my technical abilities and creative vision.</p>
-                            <p>Beyond my technical skills, I am driven by a collaborative spirit and a desire to continuously learn and grow. Working with cross-functional teams has taught me the importance of communication and teamwork in achieving project goals. I am committed to staying updated with the latest industry trends and technologies, always seeking new knowledge to enhance my craft. My goal is to use my skills and experiences to create innovative solutions that entertain, educate, and empower users, contributing to a future where technology and creativity intersect to make a positive impact.</p>
-                        </div>
-                        {/* IMG about me */}
-                        <div className="about-image">
-                            <img src="assets\profile.jpg" alt="Profile Image" className="about-image" />
-                        </div>
-                    </div>
-                </section>
-                {/* Group Projects */}
-                <section id="group projects" className="content-box Gprojects">
+                    </section>
+                );
+            case 'group projects':
+                return (
+            <section id="group projects" className="content-box Gprojects">
                     <h2>Group Projects</h2>
                     <h3>Crabity</h3>
                     <h5><a href="https://store.steampowered.com/app/2988850/Crabity/"> Link to Steam</a></h5>
@@ -132,7 +72,9 @@ const App = () => {
                         </div>
                     </div>
                 </section>
-                {/* Individual Projects */}
+                );
+            case 'individual projects':
+                return (
                 <section id="individual projects" className="content-box Iprojects">
                     <h2>Individual Projects</h2>
                     <h3>NavMesh Pathfinding</h3>
@@ -176,8 +118,10 @@ const App = () => {
                         </div>
                     </div>
                 </section>
-                {/* Education */}
-                <section id="education" className="content-box education">
+                );
+            case 'education':
+                return (
+                    <section id="education" className="content-box education">
                     <h2>Education</h2>
                     <div className="education-item">
                         <div className="education-logo">
@@ -210,7 +154,9 @@ const App = () => {
                         </div>
                     </div>
                 </section>
-                {/* Contact INFO */}
+                );
+            case 'contact':
+                return (
                 <section id="contact" className="content-box contact">
                     <h2>Contact</h2>
                     <div className="contact-group">
@@ -224,6 +170,36 @@ const App = () => {
                     <p>I am currently looking for remote work or anything in the San Francisco Bay Area and open to relocation. I would love to talk about any opportunities!</p>
                     <p>Please reach out, so we can talk about what I can do to improve your team!</p>
                 </section>
+                );
+            default:
+                return <section><h2>Welcome</h2></section>;
+        }
+    };
+
+    return (
+        <div className="container">
+            <div className="top-section">
+                <div className="top-section-content">
+                    <h2>Lukas Daniel Licon</h2>
+                    <p>Gameplay Programmer, Game Designer, Software Engineer</p>
+                    <div className="resume-buttons">
+                        <a className="resume-button" href="resumes/LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">WebDev Resume</a>
+                        <a className="resume-button" href="resumes/LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">GameDev Resume</a>
+                </div>
+                    <div className="navbar">
+                    <button onClick={() => setCurrentSection('about')}>About</button>
+                    <button onClick={() => setCurrentSection('group projects')}>Group Projects</button>
+                    <button onClick={() => setCurrentSection('individual projects')}>Individual Projects</button>
+                    <button onClick={() => setCurrentSection('education')}>Education</button>
+                    <button onClick={() => setCurrentSection('contact')}>Contact</button>
+                </div>
+                </div>
+            </div>
+            <div className="content">
+                {renderSection()}
+            </div>
+            <div className="footer">
+                <p>Footer content goes here.</p>
             </div>
         </div>
     );

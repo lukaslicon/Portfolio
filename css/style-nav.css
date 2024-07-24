@@ -1,143 +1,25 @@
+/* style-nav.css */
 .navbar {
     background-color: #2d2d2d;
-    width: 10%;
+    width: 100%;
     padding-top: 2%;
     padding-left: 1%;
-    box-sizing: border-box;
-    position: fixed;
     height: 100%;
     transition: width 0.3s ease;
 }
 
-.navbar-content {
-    display: flex;
-    flex-direction: column;
+/* Add other necessary styles here */
+
+/* style-gen.css */
+.top-section-content {
+    text-align: center;
 }
 
-.navbar-content button {
-    display: flex;
-    align-items: center;
-    width: 100%;
+.footer {
+    background-color: #2d2d2d;
     color: white;
-    background: none;
-    border: none;
-    padding: 5% 10%;
-    cursor: pointer;
-    font-size: calc(2.1px + 1vw);
-    text-align: left;
-    position: relative;
-    transition: background-color 0.3s ease;
-}
-
-.navbar button::before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    left: 2%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.navbar button:hover::before,
-.navbar button.active::before {
-    opacity: 1;
-}
-
-.navbar-email {
-    position: absolute; 
-    bottom: 0; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    padding-bottom: 10px;
-    font-size: calc(2px + 1vw); /* Adjust the base font size (14px) dynamically */
-    color: white; 
-}
-
-.navbar-toggle {
-    display: none; /* Hide the hamburger by default */
-
-}
-
-@media screen and (max-width: 768px) {
-    .navbar {
-        width: 100%;
-        height: auto;
-        padding: 10px;
-        position: relative;
-    }
-    
-    .navbar-toggle {
-        display: block; /* Show the hamburger on small screens */
-        color: white;
-        font-size: 30px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 1%;
-        position: absolute;
-        top: 1%;
-        left: 1.5%;
-    }
-
-    .navbar-content {
-        display: none; /* Hide navigation content on smaller screens by default */
-    }
-
-    .navbar-content.active {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .navbar button {
-        display: flex;
-        color: white;
-        padding: 2% 5%;
-        font-size: calc(2.1px + 1.5vw);
-
-        position: relative;
-        transition: background-color 0.3s ease;
-    }
-
-    .navbar-email {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        transform: none;
-        padding-bottom: 2%;
-        text-align: center;
-    }
-
-    .content {
-        margin-left: 0;
-    }
-
-    .about-container {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .contact-group {
-        flex-direction: column;
-    }
-
-    .resume-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .navbar button:hover::before,
-    .navbar button.active::before {
-        opacity: 0;
-    }
-    
-}
-
-@media screen and (min-width: 769px) {
-    .navbar-toggle {
-        display: none; /* Ensure hamburger is hidden on larger screens */
-    }
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
