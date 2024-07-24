@@ -6,6 +6,8 @@ body, html {
 }
 
 .container {
+    overflow-x: auto;
+    overflow-y: auto;
     min-height: 100vh;
     background-color: grey;
 }
@@ -20,10 +22,22 @@ body, html {
 }
 
 .content {
-    overflow-y: auto;
     background-color: white;
-    margin: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
     margin-top: 0;
+    margin-bottom: 0;
     border: 0;
+    padding: 2%;
 
+}
+
+
+.footer {
+    background-color: #2d2d2d;
+    color: white;
+    text-align: center;
+    padding: 1%;
+    margin: 2%;
+    margin-top: 0%;
 }

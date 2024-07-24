@@ -6,6 +6,11 @@ section {
 section h2{
     margin: 0;
     padding: 2%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 section h3{
@@ -37,15 +42,3 @@ section h5{
     font-size: 15px;
 }
 
-@media screen and (max-width: 768px) {
-    .section-header {
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    section h2 {
-        padding: 2%;
-    }
-}
