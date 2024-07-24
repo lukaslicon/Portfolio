@@ -1,9 +1,4 @@
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 body, html {
     height: 100%;
     margin: 0;
@@ -13,6 +8,7 @@ body, html {
 
 
 .container {
+    animation: fadeIn 1s ease-in-out;
     overflow-x: auto;
     overflow-y: auto;
     min-height: 100vh;
@@ -31,10 +27,6 @@ body, html {
     flex-direction: column;
 }
 
-/* Apply fade-in to sections */
-.content {
-    animation: fadeIn 1s ease-in-out;
-}
 
 .content {
     background-color: white;
@@ -47,10 +39,6 @@ body, html {
 
 }
 
-/* Box shadows for cards */
-.content {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 
 .footer {
