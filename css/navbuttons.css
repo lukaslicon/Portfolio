@@ -6,11 +6,14 @@
     justify-content: space-around;
     padding-top: 20px;
     padding-bottom: 20px;
-    width: 100%;
+    background-color: black;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 0;
 }
 
 .navbar button {
-    color: black;
+    color: white;
     background: none;
     border: none;
     cursor: pointer;

@@ -20,7 +20,7 @@ const App = () => {
                             </div>
                             {/* IMG about me */}
                             <div className="about-image">
-                                <img src="assets\profile.jpg" alt="Profile Image" className="about-image" />
+                                <img src="assets\aboutmeimg.jpg" alt="Profile Image" className="about-image" />
                             </div>
                         </div>
                     </section>
