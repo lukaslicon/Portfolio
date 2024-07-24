@@ -1,0 +1,25 @@
+.about-container {
+    display: flex;
+    padding-left: 1%;
+    padding-right: 2%;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 2%;
+    padding-left: 0;
+}
+
+.about-image {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
