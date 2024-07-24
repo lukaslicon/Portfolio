@@ -6,7 +6,7 @@
     justify-content: space-around;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: black;
+    background: linear-gradient(45deg, #555, #2b2020);
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 0;
@@ -20,8 +20,12 @@
     font-size: clamp(0.5em, 2.5vw, 1em);
 }
 
-.navbar button:hover {
-    background-color: white;
+/* Hover transitions for navbar buttons */
+.navbar button:hover, .resume-button:hover {
+    background-color: #ceb815;
+    color: white;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .top-section-content {

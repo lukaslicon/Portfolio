@@ -7,15 +7,16 @@
 
 .resume-button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ccaa21;
     color: white;
     text-decoration: none;
-    border: none;
+    border: solid;
+    border-color: black;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .resume-button:hover {
-    background-color: #0056b3;
+    background-color: #564605;
 }

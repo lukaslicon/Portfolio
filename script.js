@@ -1,8 +1,18 @@
-const { useState } = React;
+const { useState, useEffect } = React;
 const { createRoot } = ReactDOM;
 
 const App = () => {
     const [currentSection, setCurrentSection] = useState('about');
+
+    useEffect(() => {
+        AOS.init();
+        document.querySelectorAll('.navbarbutton').forEach(button => {
+            button.addEventListener('click', function() {
+                const sectionId = this.textContent.toLowerCase().replace(' ', '-');
+                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    }, []);
 
     const renderSection = () => {
         switch (currentSection) {
