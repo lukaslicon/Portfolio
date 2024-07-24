@@ -1,25 +1,55 @@
-/* style-nav.css */
-.navbar {
-    background-color: #2d2d2d;
-    width: 100%;
-    padding-top: 2%;
-    padding-left: 1%;
+/* style-gen.css */
+body, html {
     height: 100%;
-    transition: width 0.3s ease;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Add other necessary styles here */
+.container {
+    min-height: 100%;
+}
 
-/* style-gen.css */
+.top-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2d2d2d;
+    padding: 20px;
+    width: 100%;
+}
+
+.navbar button {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.navbar button:hover {
+    background-color: #555;
+}
+
 .top-section-content {
     text-align: center;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    overflow-y: auto; /* Allow the entire page to scroll */
 }
 
 .footer {
     background-color: #2d2d2d;
     color: white;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
 }
