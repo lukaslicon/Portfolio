@@ -9,7 +9,9 @@ const App = () => {
             case 'about':
                 return (
                     <section id="home" className="content-box">
-                        <h2>About Me</h2>
+                        <div class="section-header">
+                            <h2>About Me</h2>
+                        </div>
                         <div className="about-container">
                             <div className="about-text">
                                 <p>Hello, I'm Lukas Licon, a passionate software engineer and game designer with a Bachelor's degree in Computer Science: Computer Game Design from UC Santa Cruz. My fascination with technology and video games began at a young age, fueled by countless hours immersed in MMORPGs like World of Warcraft. This early passion evolved into a career ambition to create immersive and engaging game experiences that captivate players as I was once captivated.</p>
@@ -26,7 +28,9 @@ const App = () => {
             case 'group projects':
                 return (
             <section id="group projects" className="content-box Gprojects">
-                    <h2>Group Projects</h2>
+                    <div class="section-header">
+                        <h2>Group Projects</h2>
+                    </div>              
                     <h3>Crabity</h3>
                     <h5><a href="https://store.steampowered.com/app/2988850/Crabity/"> Link to Steam</a></h5>
                     <div className="gprojects-item">
@@ -100,10 +104,15 @@ const App = () => {
                 );
             case 'individual projects':
                 return (
-                <section id="individual projects" className="content-box Iprojects">
-                    <h2>Individual Projects</h2>
+                <section id="individual projects" className="content-box Iprojects">              
+                    <div class="section-header">
+                        <h2>Individual Projects</h2>
+                    </div>  
+                    <div class="section-header">
                     <h3>NavMesh Pathfinding</h3>
                     <h5><a href="https://github.com/lukaslicon/CMPM146-P1"> Link to Github</a></h5>
+                    </div>  
+
                     <div className="iprojects-item">
                         <div className="iprojects-description">
                             <p>This Python project implements a bidirectional A* search algorithm to find paths in navmeshes created from user-provided images. The program takes an image and its corresponding navmesh representation as input and outputs an image showing the path from a source to a destination point defined interactively.</p>
