@@ -37,3 +37,34 @@
     flex: 1;
 }
 
+@media screen and (max-width: 768px) {
+    .education-item,
+    .iprojects-item,
+    .gprojects-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .education-logo,
+    .iprojects-logo,
+    .gprojects-logo {
+        max-width: 100%;
+    }
+
+    .education-logo-img,
+    .iprojects-logo-img,
+    .gprojects-logo-img {
+        width: 100%;
+    }
+    .education-logo-tamiscal {
+        width: 100%;
+        height: auto;
+    }
+    
+
+    .resume-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
