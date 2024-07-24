@@ -56,9 +56,21 @@ const App = () => {
                         <div className="gprojects-logo">
                             <img src="assets\crabity screenshot.png" alt="Chromatic" className="gprojects-logo-img" />
                         </div>
-                        <div className="gprojects-description">
+                        <div className="gprojects-box">
+                            <div className="gprojects-title">
+                                <h4>Project Description</h4>
+                            </div>
+                            <div className="gprojects-description">
                             <p>Chromatic Tower Defense is a strategy game where players defend their realm using the power of chromatic towers. Set in a vibrant and colorful world, players must build and upgrade towers, each using a unique color spectrum to defend the waves of monochromatic invaders. We offer an immersive experience for strategy game enthusiasts with stunning graphics and unique color-based gameplay mechanics.</p>
-                            <p>I implemented the AI enemy pathfinding, UI/UX implementation, system interactions, and enemy spawning and wave system.</p>
+                            </div>
+                        </div>
+                        <div className="gprojects-box">
+                            <div className="gprojects-title">
+                                <h4>Contributions</h4>
+                            </div>
+                            <div className="gprojects-contributions">
+                            <p>-I implemented the AI enemy pathfinding, UI/UX implementation, system interactions, and enemy spawning and wave system.</p>
+                            </div>
                         </div>
                     </div>
                     <h3>Procedural City Generation</h3>
