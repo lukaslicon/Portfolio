@@ -160,11 +160,9 @@ const App = () => {
                 <section id="contact" className="content-box contact">
                     <h2>Contact</h2>
                     <div className="contact-group">
-                        <p>
                             <a href="mailto:lukas@licons.com"><img src="assets\email.png" alt="Email" className="contact-icon" /></a>
                             <a href="https://www.linkedin.com/in/lukas-licon/"><img src="assets\In-Blue.png" alt="LinkedIn" className="contact-icon" /></a>
                             <a href="https://github.com/lukaslicon"><img src="assets\github-mark.png" alt="Github" className="contact-icon" /></a>
-                        </p>
                     </div>
                     <p>Feel free to contact me about any business inquiries.</p>
                     <p>I am currently looking for remote work or anything in the San Francisco Bay Area and open to relocation. I would love to talk about any opportunities!</p>
