@@ -22,12 +22,13 @@
 
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     background: linear-gradient(45deg, #555, #2b2020);
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 0;
     gap: 0;
+
 }
 
 .navbar button {
@@ -51,6 +52,14 @@
 
 .top-section-content {
     text-align: center;
+}
+
+@media screen and (max-width: 350px) {
+    .navbar {
+        display: block;
+    
+    }
+
 }
 
 
