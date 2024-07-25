@@ -4,16 +4,15 @@ const { createRoot } = ReactDOM;
 const App = () => {
     const [currentSection, setCurrentSection] = useState('about');
     const [fadeClass, setFadeClass] = useState('fade-in');
-
-    useEffect(() => {
-        AOS.init();
-    }, []);
+    const [isTransitioning, setIsTransitioning] = useState(false);
 
     const handleSectionChange = (section) => {
+        setIsTransitioning(true); // Start the transition
         setFadeClass('fade-out'); // Trigger fade-out animation for the current section
         setTimeout(() => {
             setCurrentSection(section);
             setFadeClass('fade-in'); // Trigger fade-in animation for the new section
+            setIsTransitioning(false); // End the transition
         }, 1000); // Match the duration of the fade-out animation
     };
 
@@ -21,7 +20,7 @@ const App = () => {
         switch (currentSection) {
             case 'about':
                 return (
-                    <section id="home" className={`content-box ${fadeClass}`} data-aos="fade-up">
+                    <section id="home" className={`content-box ${fadeClass}`}>
                         <div className="section-header">
                             <h2>About Me</h2>
                         </div>
@@ -39,7 +38,7 @@ const App = () => {
                 );
             case 'group projects':
                 return (
-                    <section id="group projects" className={`content-box Gprojects ${fadeClass}`} data-aos="fade-up">
+                    <section id="group projects" className={`content-box Gprojects ${fadeClass}`}>
                         <div className="section-header">
                             <h2>Group Projects</h2>
                         </div>
@@ -116,14 +115,14 @@ const App = () => {
                 );
             case 'individual projects':
                 return (
-                    <section id="individual projects" className={`content-box Iprojects ${fadeClass}`} data-aos="fade-up">              
+                    <section id="individual projects" className={`content-box Iprojects ${fadeClass}`}>
                         <div className="section-header">
                             <h2>Individual Projects</h2>
-                        </div>  
+                        </div>
                         <div className="section-header">
                             <h3>NavMesh Pathfinding</h3>
                             <h5><a href="https://github.com/lukaslicon/CMPM146-P1"> Link to Github</a></h5>
-                        </div>  
+                        </div>
 
                         <div className="iprojects-item">
                             <div className="iprojects-description">
@@ -167,7 +166,7 @@ const App = () => {
                 );
             case 'education':
                 return (
-                    <section id="education" className={`content-box education ${fadeClass}`} data-aos="fade-up">
+                    <section id="education" className={`content-box education ${fadeClass}`}>
                         <h2>Education</h2>
                         <div className="education-item">
                             <div className="education-logo">
@@ -203,7 +202,7 @@ const App = () => {
                 );
             case 'contact':
                 return (
-                    <section id="contact" className={`content-box contact ${fadeClass}`} data-aos="fade-up">
+                    <section id="contact" className={`content-box contact ${fadeClass}`}>
                         <h2>Contact</h2>
                         <div className="contact-group">
                             <a href="mailto:lukas@licons.com"><img src="assets/email.png" alt="Email" className="contact-icon" /></a>
@@ -240,7 +239,8 @@ const App = () => {
                 </div>
             </div>
             <div className="content">
-                {renderSection()}
+                {isTransitioning && renderSection(currentSection)}
+                {!isTransitioning && renderSection(currentSection)}
             </div>
             <div className="footer">
                 <p>lukas@licons.com</p>

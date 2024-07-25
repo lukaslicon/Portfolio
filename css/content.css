@@ -29,7 +29,7 @@ body, html {
 
 
 .content {
-    background-color: white;
+    background: linear-gradient(90deg, #6f6f6f, #ffffff);
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 0;
@@ -38,8 +38,6 @@ body, html {
     padding: 2%;
 
 }
-
-
 
 .footer {
     background: linear-gradient(45deg, #555, #2b2020);
