@@ -13,7 +13,7 @@ const App = () => {
             setCurrentSection(section);
             setFadeClass('fade-in'); // Trigger fade-in animation for the new section
             setIsTransitioning(false); // End the transition
-        }, 1000); // Match the duration of the fade-out animation
+        }, 500); // Match the duration of the fade-out animation
     };
 
     const renderSection = () => {
