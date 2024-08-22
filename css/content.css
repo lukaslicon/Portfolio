@@ -4,6 +4,8 @@ body, html {
     margin: 0;
     display: flex;
     flex-direction: column;
+    background-color: #FAFAFA; /* Softer light gray */
+    color: #2B2B2B;
 }
 
 
@@ -12,7 +14,7 @@ body, html {
     overflow-x: auto;
     overflow-y: auto;
     min-height: 100vh;
-    background: linear-gradient(45deg, #63400c, #d4dbd3);
+    background: linear-gradient(90deg, #6f6f6f,#ffffff);
 }
 
 .top-section {
@@ -29,7 +31,7 @@ body, html {
 
 
 .content {
-    background: linear-gradient(90deg, #6f6f6f, #ffffff);
+    background: linear-gradient(90deg,#ffffff, #6f6f6f);
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 0;
@@ -40,8 +42,8 @@ body, html {
 }
 
 .footer {
-    background: linear-gradient(45deg, #555, #2b2020);
-    color: white;
+    background-color: #3A3F44; /* Dark gray footer */
+    color: #FFFFFF; /* White text for contrast */
     text-shadow: 2px 2px 4px #000;
     text-align: center;
     padding: 1%;

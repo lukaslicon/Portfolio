@@ -20,7 +20,7 @@ section h3{
     padding-left: 2%;
     font-size: 30px;
     display: inline;
-    background: linear-gradient(45deg, #362307, #b07308);
+    background: linear-gradient(45deg, #3A3F44, #555B61); /* Dark and medium gray gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -35,6 +35,7 @@ section h4{
 section p{
     margin: 0;
     padding: 2%;
+    color: #333333; /* Consistent dark text color */
 }
 
 section h5{

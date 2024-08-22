@@ -23,7 +23,7 @@
 .navbar {
     display: flex;
     justify-content: center;
-    background: linear-gradient(45deg, #555, #2b2020);
+    background: linear-gradient(45deg, #3A3F44, #555B61); 
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 0;
@@ -32,7 +32,7 @@
 }
 
 .navbar button {
-    color: white;
+    color: #FFFFFF; 
     background: none;
     border: none;
     cursor: pointer;
