@@ -1,0 +1,10 @@
+.gprojects-video {
+    display: flex;
+    margin-top: 20px;
+}
+
+.gprojects-video iframe,
+.gprojects-video video {
+    max-width: 80%;
+    height: auto;
+}

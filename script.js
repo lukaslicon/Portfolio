@@ -20,10 +20,8 @@ const App = () => {
         switch (currentSection) {
             case 'about':
                 return (
+
                     <section id="home" className={`content-box ${fadeClass}`}>
-                        <div className="section-header">
-                            <h2>About Me</h2>
-                        </div>
                         <div className="about-container">
                             <div className="about-text">
                                 <p>Hello, I'm Lukas Licon, a passionate software engineer and gameplay programmer with a Bachelor's degree in Computer Science: Computer Game Design from UC Santa Cruz. My fascination with technology and video games began at a young age, fueled by countless hours immersed in MMORPGs like World of Warcraft. This early passion evolved into a career ambition to create immersive and engaging game experiences that captivate players as I was once captivated.</p>
@@ -40,15 +38,16 @@ const App = () => {
             case 'group projects':
                 return (
                     <section id="group projects" className={`content-box Gprojects ${fadeClass}`}>
-                        <div className="section-header">
-                            <h2>Group Projects</h2>
-                        </div>
                         <h3>Crabity</h3>
-                        <h5><a href="https://store.steampowered.com/app/2988850/Crabity/"> Link to Steam</a></h5>
-                        <h5><a href="https://github.com/Team-Crabity/Crabity"> Link to Github</a></h5>
+                        <h5><a href="https://store.steampowered.com/app/2988850/Crabity/"> Link to Steam</a><a href="https://github.com/Team-Crabity/Crabity"> Link to Github</a></h5>
                         <div className="gprojects-item">
                             <div className="gprojects-logo">
                                 <img src="assets/crabity screenshot.png" alt="Crabity Logo" className="gprojects-logo-img" />
+                                <div className="gprojects-video">
+                                    <video width="385 " height="250" controls>
+                                        <source src="assets/crabityvideo.webm" type="video/webm"></source>
+                                    </video>
+                                </div>
                             </div>
                             <div className="gprojects-box">
                                 <div className="gprojects-title">
@@ -68,11 +67,16 @@ const App = () => {
                             </div>
                         </div>
                         <h3>Chromatic Conundrum</h3>
-                        <h5><a href="https://ernaniraffo.itch.io/chromatic-tower-defense"> Link to itch.io</a></h5>
-                        <h5><a href="https://github.com/lukaslicon/UnityWizards">Link to Github</a></h5>
+                        <h5><a href="https://ernaniraffo.itch.io/chromatic-tower-defense"> Link to itch.io</a>
+                        <a href="https://github.com/lukaslicon/UnityWizards">Link to Github</a></h5>
                         <div className="gprojects-item">
                             <div className="gprojects-logo">
                                 <img src="assets/chromaticImage.png" alt="Chromatic" className="gprojects-logo-img" />
+                                <div className="gprojects-video">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yME5TMrvPHk?si=8tAGNE3sytgwzEXw"
+                                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                                    clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>                            
                             </div>
                             <div className="gprojects-box">
                                 <div className="gprojects-title">
@@ -91,13 +95,19 @@ const App = () => {
                                 </div>
                             </div>
                         </div>
+
+
+
                         <h3>Procedural City Generation</h3>
                         <h5><a href="https://github.com/Procedural-BananaSlug-Studios/PCG-City-Generator"> Link to Github</a></h5>
-
-                        
                         <div className="gprojects-item">
                             <div className="gprojects-logo">
                                 <img src="assets/proceduralcities.png" alt="ProcGen City" className="gprojects-logo-img" />
+                                <div className="gprojects-video">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fOahTODNQ7k?si=x1SzxIPayuseSUVM" 
+                                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                                    clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>           
                             </div>
                             <div className="gprojects-box">
                                 <div className="gprojects-title">
@@ -119,15 +129,12 @@ const App = () => {
                                 </div>
                             </div>
                         </div>
+
                     </section>
                 );
             case 'individual projects':
                 return (
                     <section id="individual projects" className={`content-box Iprojects ${fadeClass}`}>
-                        <div className="section-header">
-                            <h2>Individual Projects</h2>
-                        </div>
-
                         <h3>C++ Unreal Engine Souls-like combat project.</h3>
                         <h5><a href="https://github.com/lukaslicon/robotStateMachine"> Link to Github</a></h5>
                         <div className="iprojects-item">
@@ -264,12 +271,38 @@ const App = () => {
                         <a className="resume-button" href="resumes/LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">GameDev Resume</a>
                     </div>
                     <div className="navbar">
-                        <button onClick={() => handleSectionChange('about')}>About</button>
-                        <button onClick={() => handleSectionChange('group projects')}>Group Projects</button>
-                        <button onClick={() => handleSectionChange('individual projects')}>Individual Projects</button>
-                        <button onClick={() => handleSectionChange('education')}>Education</button>
-                        <button onClick={() => handleSectionChange('contact')}>Contact</button>
+                        <button 
+                            onClick={() => handleSectionChange('about')} 
+                            className={currentSection === 'about' ? 'active' : ''}
+                        >
+                            About
+                        </button>
+                        <button 
+                            onClick={() => handleSectionChange('group projects')} 
+                            className={currentSection === 'group projects' ? 'active' : ''}
+                        >
+                            Group Projects
+                        </button>
+                        <button 
+                            onClick={() => handleSectionChange('individual projects')} 
+                            className={currentSection === 'individual projects' ? 'active' : ''}
+                        >
+                            Individual Projects
+                        </button>
+                        <button 
+                            onClick={() => handleSectionChange('education')} 
+                            className={currentSection === 'education' ? 'active' : ''}
+                        >
+                            Education
+                        </button>
+                        <button 
+                            onClick={() => handleSectionChange('contact')} 
+                            className={currentSection === 'contact' ? 'active' : ''}
+                        >
+                            Contact
+                        </button>
                     </div>
+
                 </div>
             </div>
             <div className="content">

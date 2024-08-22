@@ -44,15 +44,22 @@
 
 /* Hover transitions for navbar buttons */
 .navbar button:hover {
-    background-color:  #747474;
+    background-color:  #898989;
     color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
     width: auto;
 }
 
+.navbar button.active {
+    background-color: #747474; /* The background color for the active button */
+    color: white; /* Text color for the active button */
+}
+
 .top-section-content {
     text-align: center;
 }
+
+
 
 @media screen and (max-width: 350px) {
     .navbar {
