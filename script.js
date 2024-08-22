@@ -26,9 +26,10 @@ const App = () => {
                         </div>
                         <div className="about-container">
                             <div className="about-text">
-                                <p>Hello, I'm Lukas Licon, a passionate software engineer and game designer with a Bachelor's degree in Computer Science: Computer Game Design from UC Santa Cruz. My fascination with technology and video games began at a young age, fueled by countless hours immersed in MMORPGs like World of Warcraft. This early passion evolved into a career ambition to create immersive and engaging game experiences that captivate players as I was once captivated.</p>
+                                <p>Hello, I'm Lukas Licon, a passionate software engineer and gameplay programmer with a Bachelor's degree in Computer Science: Computer Game Design from UC Santa Cruz. My fascination with technology and video games began at a young age, fueled by countless hours immersed in MMORPGs like World of Warcraft. This early passion evolved into a career ambition to create immersive and engaging game experiences that captivate players as I was once captivated.</p>
                                 <p>My academic journey has been a blend of rigorous coursework and hands-on projects that have equipped me with a solid foundation in programming and game development. Each project has been a step forward in my journey, shaping my technical abilities and creative vision.</p>
                                 <p>Beyond my technical skills, I am driven by a collaborative spirit and a desire to continuously learn and grow. Working with cross-functional teams has taught me the importance of communication and teamwork in achieving project goals. I am committed to staying updated with the latest industry trends and technologies, always seeking new knowledge to enhance my craft. My goal is to use my skills and experiences to create innovative solutions that entertain, educate, and empower users, contributing to a future where technology and creativity intersect to make a positive impact.</p>
+                                <p>My main and current interest are within Game AI, Hyper-realistic combat systems, rendering machines such as Vulkan and OpenGL, and developing core gameplay loops.</p>
                             </div>
                             <div className="about-image">
                                 <img src="assets/aboutmeimg.jpg" alt="Profile Image" className="about-image" />
@@ -69,7 +70,7 @@ const App = () => {
                         <h5><a href="https://ernaniraffo.itch.io/chromatic-tower-defense"> Link to itch.io</a></h5>
                         <div className="gprojects-item">
                             <div className="gprojects-logo">
-                                <img src="assets/crabity screenshot.png" alt="Chromatic" className="gprojects-logo-img" />
+                                <img src="assets/chromaticImage.png" alt="Chromatic" className="gprojects-logo-img" />
                             </div>
                             <div className="gprojects-box">
                                 <div className="gprojects-title">
@@ -92,7 +93,7 @@ const App = () => {
                         <h5><a href="https://github.com/Procedural-BananaSlug-Studios/PCG-City-Generator"> Link to Github</a></h5>
                         <div className="gprojects-item">
                             <div className="gprojects-logo">
-                                <img src="assets/crabity screenshot.png" alt="ProcGen City" className="gprojects-logo-img" />
+                                <img src="assets/proceduralcities.png" alt="ProcGen City" className="gprojects-logo-img" />
                             </div>
                             <div className="gprojects-box">
                                 <div className="gprojects-title">
@@ -119,11 +120,51 @@ const App = () => {
                         <div className="section-header">
                             <h2>Individual Projects</h2>
                         </div>
-                        <div className="section-header">
-                            <h3>NavMesh Pathfinding</h3>
-                            <h5><a href="https://github.com/lukaslicon/CMPM146-P1"> Link to Github</a></h5>
+
+                        <h3>C++ Unreal Engine Souls-like combat project.</h3>
+                        <h5><a href="https://github.com/lukaslicon/robotStateMachine"> Link to Github</a></h5>
+                        <div className="iprojects-item">
+                            <div className="iprojects-description">
+                                <p>Creating a ARPG like arena game with souls-like combat to practice gameplay programming fast paced melee combat systems. Spawners, AI pathfinding, loot system, upgrades, and more!
+                                </p>
+                            </div>
+                            <div className="iprojects-logo">
+                                <img src="assets/imagesoon.png" alt="NavMesh Pathfinding" className="iprojects-logo-img" />
+                            </div>
                         </div>
 
+
+                        
+                        <h3>C++ Client-Server Robot State Machine</h3>
+                        <h5><a href="https://github.com/lukaslicon/robotStateMachine"> Link to Github</a></h5>
+                        <div className="iprojects-item">
+                            <div className="iprojects-description">
+                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores.</p>
+                            </div>
+                        </div>
+
+                        <h3>C++ Matrix operations calculator for sparse matrices</h3>
+                        <h5><a href="https://github.com/lukaslicon/robotStateMachine"> Link to Github</a></h5>
+                        <div className="iprojects-item">
+                            <div className="iprojects-description">
+                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores.</p>
+                            </div>
+                        </div>
+
+                        <h3>C++ Fractal Tile Renderer</h3>
+                        <h5><a href="https://github.com/lukaslicon/robotStateMachine"> Link to Github</a></h5>
+                        <div className="iprojects-item">
+                            <div className="iprojects-description">
+                                <p> Created an asynchronous fractal renderer with a message queue system for task distribution among threads using std::async & ThreadSafeQueue. - Fractal Github Link • C++ Item Loader: Developed a JSON-based item loader system with inheritance & class properties, enabling support for custom items</p>
+                            </div>
+                            <div className="iprojects-logo">
+                                <img src="assets/crabity screenshot.png" alt="NavMesh Pathfinding" className="iprojects-logo-img" />
+                            </div>
+                        </div>
+                        
+
+                        <h3>Python NavMesh Pathfinding</h3>
+                        <h5><a href="https://github.com/lukaslicon/CMPM146-P1"> Link to Github</a></h5>
                         <div className="iprojects-item">
                             <div className="iprojects-description">
                                 <p>This Python project implements a bidirectional A* search algorithm to find paths in navmeshes created from user-provided images. The program takes an image and its corresponding navmesh representation as input and outputs an image showing the path from a source to a destination point defined interactively.</p>
@@ -132,7 +173,9 @@ const App = () => {
                                 <img src="assets/crabity screenshot.png" alt="NavMesh Pathfinding" className="iprojects-logo-img" />
                             </div>
                         </div>
-                        <h3>Ultimate TicTacToe Python Bot</h3>
+
+
+                        <h3>Python Ultimate TicTacToe Bot</h3>
                         <h5><a href="https://github.com/CZarko/P2"> Link to Github</a></h5>
                         <div className="iprojects-item">
                             <div className="iprojects-description">
@@ -142,18 +185,10 @@ const App = () => {
                                 <img src="assets/crabity screenshot.png" alt="NavMesh Pathfinding" className="iprojects-logo-img" />
                             </div>
                         </div>
-                        <h3>Planet Wars Python Bot</h3>
+
+
+                        <h3>Python Planet Wars Bot</h3>
                         <h5><a href="https://github.com/lukaslicon/P3-Behavior-Trees-for-Planet-Wars"> Link to Github</a></h5>
-                        <div className="iprojects-item">
-                            <div className="iprojects-description">
-                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores.</p>
-                            </div>
-                            <div className="iprojects-logo">
-                                <img src="assets/crabity screenshot.png" alt="NavMesh Pathfinding" className="iprojects-logo-img" />
-                            </div>
-                        </div>
-                        <h3>Client-Server Robot State Machine in C++</h3>
-                        <h5><a href="https://github.com/lukaslicon/robotStateMachine"> Link to Github</a></h5>
                         <div className="iprojects-item">
                             <div className="iprojects-description">
                                 <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores.</p>
