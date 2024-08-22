@@ -231,7 +231,7 @@ const App = () => {
                         </div>
                         <h2><p>Please reach out, so we can talk about how I can fit into your team!</p></h2>
 
-                        <form action="https://formspree.io/f/{your_form_id}" method="POST" className="contact-form">
+                        <form action="https://formspree.io/f/xovapqqz" method="POST" className="contact-form">
                             <div className="form-group">
                                 <label htmlFor="name">Name:</label>
                                 <input type="text" id="name" name="name" required />
