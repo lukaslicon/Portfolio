@@ -1,29 +1,69 @@
+.contact-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Adds space between each child element */
+}
+
+.contact-icon {
+    width: 150px;
+    height: 150px;
+}
+
+
+@media screen and (max-width: 768px) {
+   .contact-group{
+        margin: 0;
+        padding: 2%;
+        flex-direction: column;
+        display: flex;
+    }
+}
+
+
+.content-box.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    width: 100%; /* Ensure full width on small screens */
+    box-sizing: border-box;
+    padding: 20px; /* Optional padding for some spacing */
+}
+
 .contact-form {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 100%; /* Full width by default */
+    width: 100%; /* Full width on smaller screens */
+    max-width: 600px; /* Limit width on larger screens */
+    margin: 0 auto; /* Auto margins to center */
+    box-sizing: border-box;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 label {
     font-weight: bold;
     color: #2B2B2B;
+    margin: 0; /* Reset default margin */
 }
 
-input, textarea {
-    padding: 1%;
+input, textarea, .submit-button {
+    padding: 10px;
+    margin: 0; /* Reset any unwanted margin */
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     color: #333333;
     background-color: #F5F5F5;
-    width: 100%; /* Full width on smaller screens */
+    width: 100%; /* Ensure full width for all form elements */
+    box-sizing: border-box; /* Include padding and border in the element's width */
 }
 
 .submit-button {
@@ -49,7 +89,10 @@ input, textarea {
         margin-right: auto;
     }
 
-    input, textarea {
+    input, textarea, .submit-button {
         width: 100%; /* Keep input elements inside the form width */
+        margin-left: auto;
+        margin-right: auto;
+        
     }
 }
