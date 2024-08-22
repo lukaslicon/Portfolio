@@ -41,6 +41,10 @@ body, html {
 
 }
 
+.content-box {
+    border-radius: 20px; /* Increase the value for more roundness */
+}
+
 .footer {
     background-color: #3A3F44; /* Dark gray footer */
     color: #FFFFFF; /* White text for contrast */
