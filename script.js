@@ -204,9 +204,9 @@ const App = () => {
                                 <img src="assets/ucsc logo.jpg" alt="School Logo" className="education-logo-img" />
                             </div>
                             <div className="education-description">
-                                <p>University of California, Santa Cruz, Graduated 2024</p>
-                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores.</p>
-                                <p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente.</p>
+                                <b><p>University of California, Santa Cruz, Graduated 2024</p></b>
+                                <p>The University of California, Santa Cruz (UCSC) offers one of the top-ranked game design programs in the world. The Computer Science: Computer Game Design B.S. program, established in 2006, was the first of its kind in the University of California system. This program is housed within the Baskin School of Engineering and is known for blending technical rigor with creative game design, making it a pioneer in game development education. UCSC's program was recently ranked in the top five best game/simulation development programs in the nation by U.S. News & World Report​.</p>
+                                <p>The curriculum is highly interdisciplinary, with courses that cover core computer science principles, game design theory, and practical game development skills. Students engage in hands-on projects, working with cutting-edge tools and technologies while also exploring the societal impact of games. UCSC fosters innovation through its integration of research, experiential learning, and collaboration across disciplines like performance, play, and design.</p>
                             </div>
                         </div>
                         <div className="education-item">
@@ -214,19 +214,8 @@ const App = () => {
                                 <img src="assets/COM-logo-color.png" alt="School Logo" className="education-logo-img" />
                             </div>
                             <div className="education-description">
-                                <p>College of Marin, 2019-2022, Associates Transfer in Computer Science</p>
-                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores.</p>
-                                <p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente.</p>
-                            </div>
-                        </div>
-                        <div className="education-item">
-                            <div className="education-logo">
-                                <img src="assets/tamiscal logo.png" alt="School Logo" className="education-logo-tamiscal" />
-                            </div>
-                            <div className="education-description">
-                                <p>High School, Class of 2019</p>
-                                <p>Lorem ipsum dolor sit amet. Et sint atque ut excepturi dolores et aspernatur quia qui aperiam reiciendis qui esse sequi ut enim error. Aut minus expedita vel consequuntur delectus aut vero dicta! Eum doloribus aliquam et adipisci voluptates quo mollitia repudiandae ut quae maiores.</p>
-                                <p>Ex eligendi eveniet eum accusantium impedit ut voluptatibus facilis 33 beatae sint vel libero assumenda. Sed porro ipsa et esse corrupti et quia sapiente. Eum expedita eaque quo facilis repellat non atque quam. Ut modi consequatur et quaerat esse quo eveniet sapiente.</p>
+                                <b><p>College of Marin, 2019-2022, Associates Transfer in Computer Science</p></b>
+                                <p>At the College of Marin, I earned an Associate of Science for Transfer (AS-T) in Computer Science. The program provided me with a solid foundation in both theoretical and applied aspects of computer science, with a focus on C++ programming. Through rigorous coursework, I developed a deep understanding of algorithms, data structures, and software development principles. Additionally, the curriculum included challenging mathematics courses such as calculus, linear algebra, and discrete mathematics. These courses equipped me with strong analytical and problem-solving skills, which have been essential in my academic and professional journey.</p>
                             </div>
                         </div>
                     </section>
@@ -240,9 +229,7 @@ const App = () => {
                             <a href="https://www.linkedin.com/in/lukas-licon/"><img src="assets/In-Blue.png" alt="LinkedIn" className="contact-icon" /></a>
                             <a href="https://github.com/lukaslicon"><img src="assets/github-mark.png" alt="Github" className="contact-icon" /></a>
                         </div>
-                        <p>Feel free to contact me about any business inquiries.</p>
-                        <p>I am currently looking for remote work or anything in the San Francisco Bay Area and open to relocation. I would love to talk about any opportunities!</p>
-                        <p>Please reach out, so we can talk about what I can do to improve your team!</p>
+                        <h2><p>Please reach out, so we can talk about how I can fit into your team!</p></h2>
                     </section>
                 );
             default:
