@@ -136,7 +136,6 @@ const App = () => {
                 return (
                     <section id="individual projects" className={`content-box Iprojects ${fadeClass}`}>
                         <h3>C++ Unreal Engine Souls-like combat project.</h3>
-                        <h5><a href="https://github.com/lukaslicon/robotStateMachine"> Link to Github</a></h5>
                         <div className="iprojects-item">
                             <div className="iprojects-description">
                                 <p>Creating a ARPG like arena game with souls-like combat to practice gameplay programming fast paced melee combat systems. </p>
