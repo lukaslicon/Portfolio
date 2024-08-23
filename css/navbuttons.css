@@ -37,13 +37,14 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 3% 3%;
+    padding: 2% 3%;
     text-align: center;
-    font-size: 1rem;
+    font-size: clamp(0.75rem, 2vw, 1.25rem); /* Responsive font scaling */
     flex: 1 1 auto; /* Allow buttons to shrink and grow */
     min-width: 150px; /* Prevent buttons from becoming too small */
     border-radius: 10px;
     transition: all 0.3s ease; /* Smooth transitions for shrinking */
+    transition: transform 0.5s ease;
 }
 
 .navbar button.active {
@@ -52,6 +53,7 @@
 
 .navbar button:hover {
     background-color: #848484;
+    transform: scale(1.1);
 }
 
 .top-section-content {
@@ -62,9 +64,6 @@
 
 /* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
-    .navbar button {
-        font-size: 0.75rem; /* Reduce font size on very small screens */
-    }
     .navbar {
         justify-content: center; /* Center the buttons */
     }
