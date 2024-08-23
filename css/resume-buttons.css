@@ -10,12 +10,12 @@
     background-color: #3a3f44; /* Dark gray for a sleek look */
     color: white;
     text-decoration: none;
-    border: solid;
-    border-color: #2b2f33; /* Slightly darker border for depth */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .resume-button:hover {
     background-color: #555b61; /* Hover effect with a lighter gray */
+    transform: scale(1.1);
 }

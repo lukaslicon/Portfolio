@@ -8,8 +8,12 @@
 .contact-icon {
     width: 150px;
     height: 150px;
+    transition: transform 0.3s ease;
 }
 
+.contact-icon:hover {
+    transform: scale(1.1);
+}
 
 @media screen and (max-width: 768px) {
    .contact-group{

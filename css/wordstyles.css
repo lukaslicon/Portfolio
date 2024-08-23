@@ -52,6 +52,7 @@ section h5{
     color:black;
     font-size: 15px;
     text-align: center; /* Centers the text horizontally */
+    transition: transform 0.3s ease;
 }
 
 h5 a {
@@ -61,4 +62,8 @@ h5 a {
 
 h5 a:last-child {
     margin-right: 0; /* Prevent extra margin on the last link */
+}
+
+h5:hover {
+    transform: scale(1.1);
 }

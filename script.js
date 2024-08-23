@@ -148,7 +148,6 @@ const App = () => {
                         </div>
 
 
-                        
                         <h3>C++ Client-Server Robot State Machine</h3>
                         <h5><a href="https://github.com/lukaslicon/robotStateMachine"> Link to Github</a></h5>
                         <div className="iprojects-item">
@@ -205,7 +204,6 @@ const App = () => {
             case 'education':
                 return (
                     <section id="education" className={`content-box education ${fadeClass}`}>
-                        <h2>Education</h2>
                         <div className="education-item">
                             <div className="education-logo">
                                 <img src="assets/ucsc logo.jpg" alt="School Logo" className="education-logo-img" />
@@ -230,7 +228,6 @@ const App = () => {
             case 'contact':
                 return (
                     <section id="contact" className={`content-box contact ${fadeClass}`}>
-                        <h2>Contact</h2>
                         <div className="contact-group">
                             <a href="mailto:lukas@licons.com"><img src="assets/email.png" alt="Email" className="contact-icon" /></a>
                             <a href="https://www.linkedin.com/in/lukas-licon/"><img src="assets/In-Blue.png" alt="LinkedIn" className="contact-icon" /></a>
@@ -255,8 +252,37 @@ const App = () => {
                         </form>
                     </section>
                 );
+
+
+                case 'Work':
+                    return (
+                        <section id="Work" className={`content-box contact ${fadeClass}`}>
+                        <div className="work-item">
+                            <div className="work-logo">
+                                <img src="assets/bluukazilogo.png" alt="BluuKaziLogo" className="work-logo-img" />
+                            </div>
+                            <div className="work-description">
+                                <b><p>Application Developer - Internship (Remote)</p></b>
+                                <p>Jul 2024 - Present</p>
+                                <p>Collaborated with a team to build a mobile app for Android. Utilized tools like Jira, Gitlab, & Figma, & contributed to
+                                agile development, task prioritization, & performance optimization. Use of Kotlin & Android Studio.</p>
+                            </div>
+                        </div>
+                        
+                        <div className="work-item">
+                            <div className="work-logo">
+                                <img src="assets/targetlogo.png" alt="Target Logo" className="target-logo" />
+                            </div>
+                            <div className="work-description">
+                                <b><p>Technical Consultant - Target (Novato, CA)</p></b>
+                                <p>Sep 2021 - Jun 2022</p>
+                                <p>Utilize my product knowledge to help customers solve their issues or set up desired systems. Learned to troubleshoot broken or misused electronics, activate devices, help customers with timely and satisfactory repairs/services, and provide customers with technology based information for sales.</p>
+                            </div>
+                        </div>
+                    </section>
+                    );
             default:
-                return <section><h2>Welcome</h2></section>;
+                return <section><h2>Page Not Found. Error 404.</h2></section>;
         }
     };
 
@@ -267,8 +293,7 @@ const App = () => {
                     <h2>Lukas Daniel Licon</h2>
                     <p>Gameplay Programmer, Game Designer, Software Engineer</p>
                     <div className="resume-buttons">
-                        <a className="resume-button" href="resumes/LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">WebDev Resume</a>
-                        <a className="resume-button" href="resumes/LukasLicon-Resume.pdf" target="_blank" rel="noopener noreferrer">GameDev Resume</a>
+                        <a className="resume-button" href="resumes/LukasLicon-ResumeEAFInal.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
                     </div>
                     <div className="navbar">
                         <button 
@@ -294,6 +319,13 @@ const App = () => {
                             className={currentSection === 'education' ? 'active' : ''}
                         >
                             Education
+                        </button>
+
+                        <button 
+                            onClick={() => handleSectionChange('Work')} 
+                            className={currentSection === 'Work' ? 'active' : ''}
+                        >
+                            Work
                         </button>
                         <button 
                             onClick={() => handleSectionChange('contact')} 

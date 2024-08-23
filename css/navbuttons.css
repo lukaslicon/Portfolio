@@ -20,43 +20,38 @@
     animation: fadeOut .5s ease-in-out forwards;
 }
 
+
 .navbar {
     display: flex;
-    justify-content: center;
-    background: linear-gradient(45deg, #3A3F44, #555B61); 
+    justify-content: space-between; /* Distribute buttons evenly */
+    background: linear-gradient(45deg, #3A3F44, #555B61);
+    flex-wrap: wrap; /* Allow buttons to wrap onto the next line */
     margin-left: 2%;
     margin-right: 2%;
-    margin-bottom: 0;
-    gap: 0;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px; 
-
+    border-top-right-radius: 10px;
 }
 
 .navbar button {
-    color: #FFFFFF; 
+    color: #FFFFFF;
     background: none;
     border: none;
     cursor: pointer;
-    font-size: clamp(0.5em, 2.5vw, 1em);
-    display: inline-block; /* Make the button an inline-block element */
-    padding: 2% 5%; /* Add padding to the button */
-    box-sizing: border-box; /* Include padding and border in the button's total width and height */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px; 
-}
-
-/* Hover transitions for navbar buttons */
-.navbar button:hover {
-    background-color:#747474;
-    color: white;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    width: auto;
+    padding: 3% 3%;
+    text-align: center;
+    font-size: 1rem;
+    flex: 1 1 auto; /* Allow buttons to shrink and grow */
+    min-width: 150px; /* Prevent buttons from becoming too small */
+    border-radius: 10px;
+    transition: all 0.3s ease; /* Smooth transitions for shrinking */
 }
 
 .navbar button.active {
-    background-color: #898989; /* The background color for the active button */
-    color: white; /* Text color for the active button */
+    background-color: #848484;
+}
+
+.navbar button:hover {
+    background-color: #848484;
 }
 
 .top-section-content {
@@ -65,12 +60,13 @@
 
 
 
-@media screen and (max-width: 350px) {
-    .navbar {
-        display: block;
-    
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .navbar button {
+        font-size: 0.75rem; /* Reduce font size on very small screens */
     }
-
+    .navbar {
+        justify-content: center; /* Center the buttons */
+    }
 }
-
 
