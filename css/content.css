@@ -15,6 +15,7 @@ body, html {
     overflow-y: auto;
     min-height: 100vh;
     background: linear-gradient(90deg, #6f6f6f,#ffffff);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .top-section {
@@ -41,9 +42,7 @@ body, html {
 
 }
 
-.content-box {
-    border-radius: 20px; /* Increase the value for more roundness */
-}
+
 
 .footer {
     background-color: #3A3F44; /* Dark gray footer */
@@ -53,4 +52,6 @@ body, html {
     padding: 1%;
     margin: 2%;
     margin-top: 0%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
 }

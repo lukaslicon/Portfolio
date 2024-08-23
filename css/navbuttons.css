@@ -28,6 +28,8 @@
     margin-right: 2%;
     margin-bottom: 0;
     gap: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
 
 }
 
@@ -40,18 +42,20 @@
     display: inline-block; /* Make the button an inline-block element */
     padding: 2% 5%; /* Add padding to the button */
     box-sizing: border-box; /* Include padding and border in the button's total width and height */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
 }
 
 /* Hover transitions for navbar buttons */
 .navbar button:hover {
-    background-color:  #898989;
+    background-color:#747474;
     color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
     width: auto;
 }
 
 .navbar button.active {
-    background-color: #747474; /* The background color for the active button */
+    background-color: #898989; /* The background color for the active button */
     color: white; /* Text color for the active button */
 }
 
