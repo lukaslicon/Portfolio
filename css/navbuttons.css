@@ -44,7 +44,7 @@
     min-width: 150px; /* Prevent buttons from becoming too small */
     border-radius: 10px;
     transition: all 0.3s ease; /* Smooth transitions for shrinking */
-    transition: transform 0.5s ease;
+    transition: transform 0.51s ease;
 }
 
 .navbar button.active {
