@@ -62,7 +62,9 @@ const App = () => {
                                     <h4>Contributions</h4>
                                 </div>
                                 <div className="gprojects-contributions">
-                                    <p>Created daily generated maps using a weighted pathfinding algorithm to make corridors based on cell movement directions. Debugged gameplay mechanics & player movement. Implemetation of UI scripts and pause menu scripting.</p>
+                                    <p>Created daily generated maps using a weighted pathfinding algorithm to make corridors based on cell movement directions. </p>
+                                        <p>Debugged gameplay mechanics & player movement. </p>
+                                        <p>Implemetation of UI scripts and pause menu scripting.</p>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +93,8 @@ const App = () => {
                                     <h4>Contributions</h4>
                                 </div>
                                 <div className="gprojects-contributions">
-                                    <p>I implemented the AI enemy pathfinding, UI/UX implementation, system interactions, and enemy spawning and wave system.</p>
+                                    <p>Using a node system I implemented the AI enemy pathfinding and enemy wave spawning system.</p>
+                                    <p>I also implemented the UI/UX for the pause menu and upgrade systems and also built some of the upgrade systems and progression systems in C#.</p>
                                 </div>
                             </div>
                         </div>
@@ -124,8 +127,8 @@ const App = () => {
                                     <h4>Contributions</h4>
                                 </div>
                                 <div className="gprojects-contributions">
-                                    <p>I hooked up neighboring assets to properly allign with the design contraints. I also helped create the WaveFunctionCollapse.cs file which propagates constraints across the city grid, selecting valid tiles based on their compatibility with adjacent tiles.</p>
-
+                                    <p>I helped create the WaveFunctionCollapse.cs file which propagates constraints across the city grid, selecting valid tiles based on their compatibility with adjacent tiles and then collapsing the cell at the given position.</p>
+                                    <p>I also hooked up neighboring assets to properly allign with our specific design contraints.</p>
                                 </div>
                             </div>
                         </div>
