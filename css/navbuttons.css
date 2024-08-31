@@ -47,11 +47,11 @@
 }
 
 .navbar button.active {
-    background-color: #848484;
+    background-color: #3a3a3a;
 }
 
 .navbar button:hover {
-    background-color: #848484;
+    background-color: #3f3f3f;
 }
 
 .top-section-content {
