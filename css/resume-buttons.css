@@ -7,7 +7,7 @@
 
 .resume-button {
     padding: 10px 20px;
-    background-color: #3a3f44; /* Dark gray for a sleek look */
+    background-color: #4681bd; /* Dark gray for a sleek look */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -16,6 +16,6 @@
     transition: transform 0.3s ease;
 }
 .resume-button:hover {
-    background-color: #555b61; /* Hover effect with a lighter gray */
+    background-color: #35608c; /* Hover effect with a lighter gray */
     transform: scale(1.1);
 }

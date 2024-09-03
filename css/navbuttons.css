@@ -28,8 +28,6 @@
     flex-wrap: wrap; /* Allow buttons to wrap onto the next line */
     margin-left: 2%;
     margin-right: 2%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
 .navbar button {
@@ -42,7 +40,6 @@
     font-size: clamp(0.75rem, 2vw, 1.25rem); /* Responsive font scaling */
     flex: 1 1 auto; /* Allow buttons to shrink and grow */
     min-width: 150px; /* Prevent buttons from becoming too small */
-    border-radius: 10px;
     transition: all 0.3s ease; /* Smooth transitions for shrinking */
 }
 
