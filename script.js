@@ -140,13 +140,18 @@ const App = () => {
                         <h3>C++ Unreal Engine Souls-like combat project.</h3>
                         <h5><a href="https://github.com/lukaslicon/UE5_Movement"> Link to Github</a></h5>
                         <div className="iprojects-item">
+                            <div className="gprojects-video-unreal">
+                                    <video width="385 " height="250" controls>
+                                        <source src="assets\Unreal Progress.mp4" type="video/mp4"></source>
+                                    </video>
+                                </div>
                             <div className="iprojects-description">
-                                <p>Creating a ARPG like arena game with souls-like combat to practice gameplay programming fast paced melee combat systems. </p>
+                                <p>All work is being done in C++ (staying away from blueprints as much as possible). Creating an ARPG like arena game with souls-like combat to practice gameplay programming fast paced melee combat systems. </p>
                                 <p>Practing Spawners, AI pathfinding, loot system, upgrades, and more!</p>
+                                <p>Currently implementing the combat system with heavy and light attacks. Both speed sets are equal so that all spin attacks take the same time and all swing attacks take the same time. I am implemting damage and attack hit interfaces with debug tracing at the moment.</p>
+                                <p>I am also currently working on the AI for my enemy monster so he has smart fighting tactics that prioritize the offense while keeping in mind survival and counters. I am also adding in attacks that have root motion for both the player and enemies.</p>
                             </div>
-                            <div className="iprojects-logo">
-                                <img src="assets/imagesoon.png" alt="NavMesh Pathfinding" className="iprojects-logo-img" />
-                            </div>
+
                         </div>
                         
 
