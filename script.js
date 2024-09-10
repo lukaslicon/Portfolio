@@ -304,7 +304,7 @@ const App = () => {
                     <h2>Lukas Daniel Licon</h2>
                     <p>Gameplay Programmer, Game Designer, Software Engineer</p>
                     <div className="resume-buttons">
-                        <a className="resume-button" href="resumes/LukasLicon-ResumeGameFinal.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                        <a className="resume-button" href="resumes/LukasLicon-ResumeGameFinalCopy.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
                     </div>
                     <div className="navbar">
                         <button 
