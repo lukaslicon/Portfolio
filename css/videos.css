@@ -2,6 +2,9 @@
     display: flex;
     margin-top: 20px;
     flex: 1;
+    flex-direction: column; /* Ensures the videos are aligned in a column */
+    align-items: center; /* Centers the videos horizontally */
+    gap: 20px;
 }
 
 .gprojects-video {
