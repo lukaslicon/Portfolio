@@ -366,7 +366,7 @@ const App = () => {
         <h5>lukas@licons.com</h5>
         <a
             className="button resume-button no-scale"
-            href="resumes/LukasLicon-ResumeGameFinalCopy.pdf"
+            href="resumes/LukasLicon-ResumeGameFinal.pdf"
             target="_blank"
             rel="noopener noreferrer"
             >
