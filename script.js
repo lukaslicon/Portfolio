@@ -118,7 +118,6 @@ const App = () => {
         </article>
       </section>
     ),
-/* Add this to your sections object in your script.js */
 
 'individual projects': (
     <section id="individual-projects" className={`content-box ${fadeClass}`}>
