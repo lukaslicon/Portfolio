@@ -1,0 +1,71 @@
+  
+  /* Education Section */
+  .item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  
+  .item-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .item-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .item-description {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .item-description p {
+    text-align: left;
+  }
+  
+  /* Responsive Design for Larger Screens */
+  @media (min-width: 768px) {
+    .project-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .project-description {
+      text-align: left;
+      margin-left: 40px;
+    }
+  
+    .project-content img {
+      flex: 1;
+      margin-bottom: 0;
+    }
+  
+    .item-container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .item-logo {
+      width: 200px;
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+  
+    .item-description {
+      flex: 1;
+      text-align: left;
+    }
+  
+    .item-description p {
+      text-align: left;
+    }
+  }
+  

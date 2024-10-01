@@ -1,0 +1,36 @@
+  
+
+/* Additional CSS for project-media */
+.project-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-media video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 1050px) {
+    .project-media {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .project-media video {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  
+    .project-media video:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  

@@ -1,0 +1,23 @@
+/* Project Section */
+.project-item {
+    margin-bottom: 60px;
+  }
+  
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-description {
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .project-content img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
