@@ -288,6 +288,20 @@ const App = () => {
       <section id="work" className={`content-box ${fadeClass}`}>
         <h2>Work Experience</h2>
 
+        {/* Work Item: Glade (YC23) */}
+        <div className="item-container">
+          <img src="assets/gladestudio_logo.jpg" alt="Glade Logo" className="item-logo" />
+          <div className="item-description">
+            <b>
+              <p>Game Engineer - Internship (Remote)</p>
+            </b>
+            <p>Oct 2024 - Present</p>
+            <p>
+              Collaborate on designing new gameplay mechanics, brainstorming and iterating on the core gameplay loop, and creating new content. Use of Unreal Engine, C++, and Github.
+            </p>
+          </div>
+        </div>
+
         {/* Work Item: BluuKazi */}
         <div className="item-container">
           <img src="assets/bluukazilogo.png" alt="BluuKazi Logo" className="item-logo" />
@@ -295,9 +309,9 @@ const App = () => {
             <b>
               <p>Application Developer - Internship (Remote)</p>
             </b>
-            <p>Jul 2024 - Present</p>
+            <p>Jul 2024 - Oct 2024</p>
             <p>
-              Collaborated with a team to build a mobile app for Android. Utilized tools like Jira, GitLab, and Figma, and contributed to agile development, task prioritization, and performance optimization. Use of Kotlin and Android Studio.
+              Collaborated with a team for 3 months to build a mobile app for Android. Utilized tools like Jira, GitLab, and Figma, and contributed to agile development, task prioritization, and performance optimization. Use of Kotlin and Android Studio.
             </p>
           </div>
         </div>
