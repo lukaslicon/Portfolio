@@ -25,10 +25,10 @@ const App = () => {
               Hello, I'm Lukas Licon, a passionate gameplay programmer and software engineer with an interest in C++ and Game AI. My fascination with technology and video games began at a young age, fueled by countless hours immersed in MMORPGs like World of Warcraft. This early passion evolved into a career ambition to create immersive and engaging game experiences that captivate players as I was once captivated.
             </p>
             <p>
-              My academic journey has been a blend of rigorous coursework and hands-on projects, providing me with a robust foundation in programming and game development. Each project has been a pivotal step in honing my technical skills and nurturing my creative vision. Through my studies, I've developed a strong affinity for challenges; the more complex the task, the more it captivates me. I thrive on pushing my limits, which is why, after spending a couple of years developing games in Unity at UCSC, I'm now enthusiastically jumping back into Unreal Engine. For the past three months, I've dedicated myself to working with Unreal Engine daily, eager to explore its potential and use my knowledge within C++ making an ARPG/Souls-like game as an indie developer.
+              My academic journey has been a blend of rigorous coursework and hands-on projects, providing me with a robust foundation in programming and game development. Each project has been a pivotal step in honing my technical skills and nurturing my creative vision. Through my studies, I've developed a strong affinity for challenges; the more complex the task, the more it captivates me. I thrive on pushing my limits, which is why, after spending a couple of years developing games in Unity at UCSC, I'm now enthusiastically jumping back into Unreal Engine each day eager to explore its potential and use my knowledge within C++ to learn as much as possible while applying my skills to help studios achieve their design goals and solve problems using critical thinking.
             </p>
             <p>
-              Beyond my technical expertise, I find deep satisfaction in translating a designer's vision into engaging gameplay that resonates with users. My work is driven by the belief that the best games are those that seamlessly blend creative concepts with precise execution, creating experiences that are both captivating and fun. Collaborating with cross-functional teams has taught me the importance of clear communication and teamwork in bringing these visions to life. I am committed to staying at the forefront of industry trends and continuously refining my skills, as I am passionate about pushing the boundaries of what’s possible in game development. My goal is to craft experiences that not only entertain but also leave a lasting impact on players, ensuring that every project I work on contributes to the joy and engagement of its audience while I continue to grow and learn as a developer.
+              Beyond my technical expertise, I find deep satisfaction in translating a designer's vision into engaging gameplay that resonates with users. My work is driven by the belief that the best games are those that seamlessly blend creative concepts with precise execution, creating experiences that are both captivating and fun. Collaborating with cross-functional teams has taught me the importance of clear communication and teamwork in bringing these visions to life. I am passionate about pushing the boundaries of what’s possible in game development, reach out so we can break those boundaries and see what new types of games are possible!
             </p>
           </div>
         </section>
@@ -297,7 +297,10 @@ const App = () => {
             </b>
             <p>Oct 2024 - Present</p>
             <p>
-              Collaborate on designing new gameplay mechanics, brainstorming and iterating on the core gameplay loop, and creating new content. Use of Unreal Engine, C++, and Github.
+              Currently working on enemy behavior trees, designing boss phases, states for enemies (fleeing, patrolling, chasing, attacking, dead), and enemy abilities/ GAS ability implementation.
+            </p>
+            <p>
+              Collaborate on designing new gameplay mechanics, brainstorming and iterating on the core gameplay loop, and creating new content through weekly remote standups and meetings. Use of Unreal Engine 5.2, C++/Blueprints, and Github.
             </p>
           </div>
         </div>
