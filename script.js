@@ -22,13 +22,23 @@ const App = () => {
           </div>
           <div className="about-text">
           <p>
-              Hello, I'm Lukas Licon, a passionate gameplay programmer and software engineer with an interest in C++ and Game AI. My fascination with technology and video games began at a young age, fueled by countless hours immersed in MMORPGs like World of Warcraft. This early passion evolved into a career ambition to create immersive and engaging game experiences that captivate players as I was once captivated.
+              Hello, I'm Lukas Licon, a passionate gameplay programmer and software engineer with a strong focus on C++, Unreal Engine, and AI-driven gameplay systems. 
+              My fascination with technology and video games began at a young age, fueled by countless hours immersed in MMORPGs like World of Warcraft. 
+              This early passion grew into a career ambition to craft immersive and engaging game experiences that captivate players as I was once captivated.
             </p>
             <p>
-              My academic journey has been a blend of rigorous coursework and hands-on projects, providing me with a robust foundation in programming and game development. Each project has been a pivotal step in honing my technical skills and nurturing my creative vision. Through my studies, I've developed a strong affinity for challenges; the more complex the task, the more it captivates me. I thrive on pushing my limits, which is why, after spending a couple of years developing games in Unity at UCSC, I'm now enthusiastically jumping back into Unreal Engine each day eager to explore its potential and use my knowledge within C++ to learn as much as possible while applying my skills to help studios achieve their design goals and solve problems using critical thinking.
+              My career has combined rigorous programming challenges with hands-on development, giving me a solid foundation in both technical depth and creative problem-solving. 
+              I thrive on tackling complex systems, and I spend each day pushing further into Unreal Engine and C++ to design innovative gameplay and solve problems with critical thinking.
             </p>
             <p>
-              Beyond my technical expertise, I find deep satisfaction in translating a designer's vision into engaging gameplay that resonates with users. My work is driven by the belief that the best games are those that seamlessly blend creative concepts with precise execution, creating experiences that are both captivating and fun. Collaborating with cross-functional teams has taught me the importance of clear communication and teamwork in bringing these visions to life. I am passionate about pushing the boundaries of what’s possible in game development, reach out so we can break those boundaries and see what new types of games are possible!
+              Alongside gameplay programming, I specialize in AI inference and runtime integration of models into game environments. 
+              In both my professional work and personal projects, I’ve trained full models and LoRA adapters, conducted dataset testing, emotion research, and post-training evaluation, and applied these models to speech-to-text, text-to-text, and text-to-speech systems for interactive runtime use. 
+              This bridges cutting-edge AI research with practical gameplay applications while remain on local devices, allowing NPCs to respond dynamically with unique personalities, knowledge, and emotional nuance without large cloud api costs.
+            </p>
+            <p>
+              At the core of my work is a drive to build systems that make advanced AI practical, intuitive, and impactful in real-time environments. 
+              I take deep satisfaction in transforming ambitious concepts into working technology—whether that’s developing responsive NPC interactions, designing runtime pipelines for AI inference, or training and evaluating models for speech and text integration. 
+              My passion is pushing the boundaries of how AI can be applied, and I’m eager to collaborate with teams who want to explore new ways to create more dynamic, intelligent, and immersive interactive experiences.
             </p>
           </div>
         </section>
@@ -293,9 +303,25 @@ const App = () => {
           <img src="assets/gladestudio_logo.jpg" alt="Glade Logo" className="item-logo" />
           <div className="item-description">
             <b>
+              <p>AI/C++ Engineer (Remote)</p>
+            </b>
+            <p>Nov 2024 - Present</p>
+            <p>
+             Created and working on the GladeCore plugin for CursedCrown, a comprehensive Unreal Engine system for AI-driven NPC interactions. 
+             Designed an easy-to-use framework for local AI inference (speech-to-text, text-to-text, text-to-speech), enabling players to hold dynamic, unscripted conversations with NPCs through voice or text. 
+             Implemented real-time inference-driven responses, with personalities, knowledge, and voices defined through configurable in-engine data assets.
+            </p>
+          </div>
+        </div>
+
+        {/* Work Item: Glade (YC23) Internship*/}
+        <div className="item-container">
+          <img src="assets/gladestudio_logo.jpg" alt="Glade Logo" className="item-logo" />
+          <div className="item-description">
+            <b>
               <p>Game Engineer - Internship (Remote)</p>
             </b>
-            <p>Oct 2024 - Present</p>
+            <p>Oct 2024 - Nov 2024</p>
             <p>
               Currently working on enemy behavior trees, designing boss phases, states for enemies (fleeing, patrolling, chasing, attacking, dead), and enemy abilities/ GAS ability implementation.
             </p>
@@ -378,7 +404,7 @@ const App = () => {
     <>
       <header>
         <h1>Lukas Daniel Licon</h1>
-        <p>Gameplay Programmer, Game Designer, Software Engineer</p>
+        <p>Gameplay Programmer, AI Engineer, Software Engineer</p>
         <h5>lukas@licons.com</h5>
         <a
             className="button resume-button no-scale"
