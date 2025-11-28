@@ -17,7 +17,7 @@ const App = () => {
     about: (
         <section id="about" className={`content-box ${fadeClass}`}>
           <div className="about-header">
-            <img src="assets/aboutmeimg.jpg" alt="Profile Image" className="about-image" />
+            <img src="assets/profilepic.jpg" alt="Profile Image" className="about-image" />
             <h2>About Me</h2>
           </div>
           <div className="about-text">
@@ -314,36 +314,36 @@ const App = () => {
       <section id="work" className={`content-box ${fadeClass}`}>
         <h2>Work Experience</h2>
 
-        {/* Work Item: Glade (YC23) */}
+        {/* Work Item: Glade (YC23) Year 2*/}
         <div className="item-container">
           <img src="assets/gladestudio_logo.jpg" alt="Glade Logo" className="item-logo" />
           <div className="item-description">
             <b>
-              <p>AI/C++ Engineer (Remote)</p>
+              <p>Founding Engineer</p>
             </b>
-            <p>Nov 2024 - Present</p>
+            <p>Oct 2025 - Present</p>
             <p>
-             Created and working on the GladeCore plugin for CursedCrown, a comprehensive Unreal Engine system for AI-driven NPC interactions. 
-             Designed an easy-to-use framework for local AI inference (speech-to-text, text-to-text, text-to-speech), enabling players to hold dynamic, unscripted conversations with NPCs through voice or text. 
-             Implemented real-time inference-driven responses, with personalities, knowledge, and voices defined through configurable in-engine data assets.
+             C#/C++Created and worked on the GladeCore plugin for Unity and Unreal engine to bring immersive generative experiences to players using local AI inference. Designed an easy-to-use framework for local AI inference (speech-to-text, text-to-text, text-to-speech), enabling players to hold dynamic, unscripted conversations with NPCs through voice or text.
             </p>
+            <p>
+             Advised and lead the engineering team on technical decisions based on capabilties and timelines.
+            </p>
+            <p><b>Tech Stack:</b> C++, C#, Unreal Engine 5, Unity</p>
           </div>
         </div>
 
-        {/* Work Item: Glade (YC23) Internship*/}
+        {/* Work Item: Glade (YC23) Year 1*/}
         <div className="item-container">
           <img src="assets/gladestudio_logo.jpg" alt="Glade Logo" className="item-logo" />
           <div className="item-description">
             <b>
-              <p>Game Engineer - Internship (Remote)</p>
+              <p>AI Engineer</p>
             </b>
-            <p>Oct 2024 - Nov 2024</p>
+            <p>Oct 2024 - Oct 2025</p>
             <p>
-              Currently working on enemy behavior trees, designing boss phases, states for enemies (fleeing, patrolling, chasing, attacking, dead), and enemy abilities/ GAS ability implementation.
+             Created and worked on the GladeCore plugin for Unity and Unreal engine using C#/C++ to bring immersive generative experiences to players using local AI inference. Designed an easy-to-use framework for local AI inference (speech-to-text, text-to-text, text-to-speech), enabling players to hold dynamic, unscripted conversations with NPCs through voice or text.
             </p>
-            <p>
-              Collaborate on designing new gameplay mechanics, brainstorming and iterating on the core gameplay loop, and creating new content through weekly remote standups and meetings. Use of Unreal Engine 5.2, C++/Blueprints, and Github.
-            </p>
+            <p><b>Tech Stack:</b> C++, C#, Unreal Engine 5, Unity</p>
           </div>
         </div>
 
@@ -352,12 +352,13 @@ const App = () => {
           <img src="assets/bluukazilogo.png" alt="BluuKazi Logo" className="item-logo" />
           <div className="item-description">
             <b>
-              <p>Application Developer - Internship (Remote)</p>
+              <p>Application Developer - Internship </p>
             </b>
             <p>Jul 2024 - Oct 2024</p>
             <p>
               Collaborated with a team for 3 months to build a mobile app for Android. Utilized tools like Jira, GitLab, and Figma, and contributed to agile development, task prioritization, and performance optimization. Use of Kotlin and Android Studio.
             </p>
+            <p><b>Tech Stack:</b> Kotlin, Android Studio</p>
           </div>
         </div>
 
@@ -366,7 +367,7 @@ const App = () => {
           <img src="assets/targetlogo.png" alt="Target Logo" className="item-logo" />
           <div className="item-description">
             <b>
-              <p>Technical Consultant - Target (Novato, CA)</p>
+              <p>Technical Consultant - Target</p>
             </b>
             <p>Sep 2021 - Jun 2022</p>
             <p>
@@ -420,17 +421,16 @@ const App = () => {
     <>
       <header>
         <h1>Lukas Daniel Licon</h1>
-        <p>Gameplay Programmer, AI Engineer, Software Engineer</p>
+        <p>AI Engineer, Game AI Engineer, Gameplay Programmer</p>
         <h5>lukas@licons.com</h5>
         <a
             className="button resume-button no-scale"
-            href="resumes/LukasLicon-ResumeGameFinal.pdf"
+            href="resumes/LukasLicon-AIEngineer-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             >
             Resume
             </a>
-
 
         <nav className="navbar">
           {navItems.map((item) => (
