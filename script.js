@@ -32,13 +32,13 @@ const App = () => {
             </p>
             <p>
               Alongside gameplay programming, I specialize in AI inference and runtime integration of models into game environments. 
-              In both my professional work and personal projects, I’ve trained full models and LoRA adapters, conducted dataset testing, emotion research, and post-training evaluation, and applied these models to speech-to-text, text-to-text, and text-to-speech systems for interactive runtime use. 
+              In both my professional work and personal projects, I've trained full models and LoRA adapters, conducted dataset testing, emotion research, and post-training evaluation, and applied these models to speech-to-text, text-to-text, and text-to-speech systems for interactive runtime use. 
               This bridges cutting-edge AI research with practical gameplay applications while remain on local devices, allowing NPCs to respond dynamically with unique personalities, knowledge, and emotional nuance without large cloud api costs.
             </p>
             <p>
               At the core of my work is a drive to build systems that make advanced AI practical, intuitive, and impactful in real-time environments. 
-              I take deep satisfaction in transforming ambitious concepts into working technology—whether that’s developing responsive NPC interactions, designing runtime pipelines for AI inference, or training and evaluating models for speech and text integration. 
-              My passion is pushing the boundaries of how AI can be applied, and I’m eager to collaborate with teams who want to explore new ways to create more dynamic, intelligent, and immersive interactive experiences.
+              I take deep satisfaction in transforming ambitious concepts into working technology whether that's developing responsive NPC interactions, designing runtime pipelines for AI inference, or training and evaluating models for speech and text integration. 
+              My passion is pushing the boundaries of how AI can be applied, and I'm eager to collaborate with teams who want to explore new ways to create more dynamic, intelligent, and immersive interactive experiences.
             </p>
           </div>
         </section>
