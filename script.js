@@ -132,6 +132,28 @@ const App = () => {
 'individual projects': (
     <section id="individual-projects" className={`content-box ${fadeClass}`}>
       <h2>Individual Projects</h2>
+
+      {/* Project: Unity 3rd Person Roguelike */}
+      <article className="project-item">
+        <h3>Unity 3rd Person Shooter-Roguelike </h3>
+        <div className="project-content">
+            <p>
+              Placeholder Empty Vid
+            </p>
+          <div className="project-media">
+
+            <video width="385" height="250" controls>
+              <source src="" type="video/mp4" />
+            </video>
+          </div>
+          <div className="project-description">
+            <p>
+              Working on roguelike 3rd person in Unity which uses item upgrade system, resource management + wallet, persistent inventory systems, 3rd person shooting with aiming, animation IK, etc.
+            </p>
+          </div>
+        </div>
+      </article>
+  
   
       {/* Project: C++ Unreal Engine Souls-like Combat Project */}
       <article className="project-item">
@@ -150,15 +172,9 @@ const App = () => {
           </div>
           <div className="project-description">
             <p>
-              All work is being done in C++ (staying away from blueprints as much as possible). Creating an ARPG-like arena game with souls-like combat to practice gameplay programming fast-paced melee combat systems.
+              All work is done in C++ (staying away from blueprints as much as possible). Was creating an ARPG-like arena game with souls-like combat to practice gameplay programming fast-paced melee combat systems.
             </p>
-            <p>Practicing Spawners, AI pathfinding, loot system, upgrades, and more!</p>
-            <p>
-              Currently implementing the combat system with heavy and light attacks. Both speed sets are equal so that all spin attacks take the same time and all swing attacks take the same time. I am implementing damage and attack hit interfaces with debug tracing at the moment.
-            </p>
-            <p>
-              I am also currently working on the AI for my enemy monster so he has smart fighting tactics that prioritize the offense while keeping in mind survival and counters. I am also adding in attacks that have root motion for both the player and enemies.
-            </p>
+            <p>Practiced Spawners, AI pathfinding, loot system, upgrades, and more.</p>
           </div>
         </div>
       </article>
