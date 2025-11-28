@@ -275,41 +275,6 @@ const App = () => {
 
   </section>
 ),
-  
-    education: (
-      <section id="education" className={`content-box ${fadeClass}`}>
-        <h2>Education</h2>
-
-        {/* Education Item: UCSC */}
-        <div className="item-container">
-          <img src="assets/ucsc logo.jpg" alt="UCSC Logo" className="item-logo" />
-          <div className="item-description">
-            <b>
-              <p>University of California, Santa Cruz, Graduated 2024</p>
-            </b>
-            <p>
-              The University of California, Santa Cruz (UCSC) offers one of the top-ranked game design programs in the world. The Computer Science: Computer Game Design B.S. program, established in 2006, was the first of its kind in the University of California system. This program is housed within the Baskin School of Engineering and is known for blending technical rigor with creative game design, making it a pioneer in game development education. UCSC's program was recently ranked in the top five best game/simulation development programs in the nation by U.S. News & World Report.
-            </p>
-            <p>
-              The curriculum is highly interdisciplinary, with courses that cover core computer science principles, game design theory, and practical game development skills. Students engage in hands-on projects, working with cutting-edge tools and technologies while also exploring the societal impact of games. UCSC fosters innovation through its integration of research, experiential learning, and collaboration across disciplines like performance, play, and design.
-            </p>
-          </div>
-        </div>
-
-        {/* Education Item: College of Marin */}
-        <div className="item-container">
-          <img src="assets/COM-logo-color.png" alt="College of Marin Logo" className="item-logo" />
-          <div className="item-description">
-            <b>
-              <p>College of Marin, 2019-2022, Associate Transfer in Computer Science</p>
-            </b>
-            <p>
-              At the College of Marin, I earned an Associate of Science for Transfer (AS-T) in Computer Science. The program provided me with a solid foundation in both theoretical and applied aspects of computer science, with a focus on C++ programming. Through rigorous coursework, I developed a deep understanding of algorithms, data structures, and software development principles. Additionally, the curriculum included challenging mathematics courses such as calculus, linear algebra, and discrete mathematics. These courses equipped me with strong analytical and problem-solving skills, which have been essential in my academic and professional journey.
-            </p>
-          </div>
-        </div>
-      </section>
-    ),
     work: (
       <section id="work" className={`content-box ${fadeClass}`}>
         <h2>Work Experience</h2>
@@ -377,6 +342,41 @@ const App = () => {
         </div>
       </section>
     ),
+    
+    education: (
+      <section id="education" className={`content-box ${fadeClass}`}>
+        <h2>Education</h2>
+
+        {/* Education Item: UCSC */}
+        <div className="item-container">
+          <img src="assets/ucsc logo.jpg" alt="UCSC Logo" className="item-logo" />
+          <div className="item-description">
+            <b>
+              <p>University of California, Santa Cruz, Graduated 2024</p>
+            </b>
+            <p>
+              The University of California, Santa Cruz (UCSC) offers one of the top-ranked game design programs in the world. The Computer Science: Computer Game Design B.S. program, established in 2006, was the first of its kind in the University of California system. This program is housed within the Baskin School of Engineering and is known for blending technical rigor with creative game design, making it a pioneer in game development education. UCSC's program was recently ranked in the top five best game/simulation development programs in the nation by U.S. News & World Report.
+            </p>
+            <p>
+              The curriculum is highly interdisciplinary, with courses that cover core computer science principles, game design theory, and practical game development skills. Students engage in hands-on projects, working with cutting-edge tools and technologies while also exploring the societal impact of games. UCSC fosters innovation through its integration of research, experiential learning, and collaboration across disciplines like performance, play, and design.
+            </p>
+          </div>
+        </div>
+
+        {/* Education Item: College of Marin */}
+        <div className="item-container">
+          <img src="assets/COM-logo-color.png" alt="College of Marin Logo" className="item-logo" />
+          <div className="item-description">
+            <b>
+              <p>College of Marin, 2019-2022, Associate Transfer in Computer Science</p>
+            </b>
+            <p>
+              At the College of Marin, I earned an Associate of Science for Transfer (AS-T) in Computer Science. The program provided me with a solid foundation in both theoretical and applied aspects of computer science, with a focus on C++ programming. Through rigorous coursework, I developed a deep understanding of algorithms, data structures, and software development principles. Additionally, the curriculum included challenging mathematics courses such as calculus, linear algebra, and discrete mathematics. These courses equipped me with strong analytical and problem-solving skills, which have been essential in my academic and professional journey.
+            </p>
+          </div>
+        </div>
+      </section>
+    ),
     contact: (
         <section id="contact" className={`content-box ${fadeClass}`}>
           <h2>Contact</h2>
@@ -415,7 +415,7 @@ const App = () => {
       
   };
 
-  const navItems = ['about', 'group projects', 'individual projects', 'education', 'work', 'contact'];
+  const navItems = ['about', 'group projects', 'individual projects', 'work', 'education','contact'];
 
   return (
     <>
