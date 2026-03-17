@@ -242,10 +242,10 @@
 
 /* ========== Hero gradient text + glow ========== */
 
-/* Dark mode: orange–black gradient */
+/* Dark mode: blue/cyan–black gradient */
 .hero-title-gradient {
   color: var(--color-text);
-  background: linear-gradient(135deg, #0A0E17 0%, #1C1917 35%, #EA580C 70%, #C2410C 100%);
+  background: linear-gradient(135deg, #0A0E17 0%, #1C1917 35%, var(--color-accent) 70%, #06B6D4 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -420,13 +420,15 @@ section h2:hover {
   box-shadow: 0 0 6px rgba(251, 191, 36, 0.2);
 }
 
+/* Light mode: warm orange/amber gradient (daytime) */
 [data-theme="light"] .hero-title-gradient {
-  background: none;
-  -webkit-background-clip: unset;
-  background-clip: unset;
-  -webkit-text-fill-color: var(--color-text);
-  color: var(--color-text);
-  animation: none;
+  background: linear-gradient(135deg, #1C1917 0%, #57534E 35%, #B45309 70%, #C2410C 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: heroTitleShimmer 8s ease-in-out infinite;
 }
 
 [data-theme="light"] .hero-glow {
