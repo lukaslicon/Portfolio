@@ -4,7 +4,7 @@ header {
   margin-top: var(--space-xl);
   text-align: center;
   padding: var(--space-3xl) var(--space-md);
-  background-color: var(--color-bg-subtle);
+  background: var(--color-bg);
 }
 
 header h1 {
