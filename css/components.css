@@ -117,7 +117,7 @@
 
 [data-theme="light"] .button {
   background: linear-gradient(135deg, var(--color-accent), rgba(255, 255, 255, 0.95));
-  border-color: rgba(8, 145, 178, 0.5);
+  border-color: rgba(224, 120, 45, 0.5);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 [data-theme="light"] .button:hover,

@@ -65,6 +65,11 @@
   border-color: rgba(34, 211, 238, 0.2);
 }
 
+[data-theme="light"] .item-container:hover {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(224, 120, 45, 0.25);
+}
+
 /* Nav Resume button: standout morph on hover */
 .nav-resume.button:hover {
   transform: translateY(-2px) scale(1.02);
