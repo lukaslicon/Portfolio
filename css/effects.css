@@ -89,19 +89,10 @@
   }
 }
 
-/* Geometric layer: hex pattern + circuit lines */
+/* Geometric layer: circuit lines */
 .bg-geometry {
   position: absolute;
   inset: 0;
-}
-
-.bg-hex-pattern {
-  position: absolute;
-  inset: -20%;
-  opacity: 0.12;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='98' viewBox='0 0 56 98'%3E%3Cpath fill='none' stroke='%2322D3EE' stroke-width='0.4' d='M28 0l27 15.5v31L28 62L1 46.5v-31L28 0z'/%3E%3C/svg%3E");
-  background-size: 56px 49px;
-  animation: bgHexDrift 25s linear infinite;
 }
 
 .bg-circuit-lines {
@@ -114,11 +105,6 @@
     linear-gradient(15deg, transparent 60%, rgba(34, 211, 238, 0.25) 65%, transparent 70%);
   background-size: 400% 300%;
   animation: bgCircuitPulse 24s ease-in-out infinite;
-}
-
-@keyframes bgHexDrift {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(28px, 24.5px); }
 }
 
 @keyframes bgCircuitPulse {
@@ -256,9 +242,10 @@
 
 /* ========== Hero gradient text + glow ========== */
 
+/* Dark mode: orange–black gradient */
 .hero-title-gradient {
   color: var(--color-text);
-  background: linear-gradient(135deg, #E8EEF4 0%, #94A3B8 40%, var(--color-accent) 70%, #E8EEF4 100%);
+  background: linear-gradient(135deg, #0A0E17 0%, #1C1917 35%, #EA580C 70%, #C2410C 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -396,11 +383,6 @@ section h2:hover {
   }
 }
 
-[data-theme="light"] .bg-hex-pattern {
-  opacity: 0.07;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='98' viewBox='0 0 56 98'%3E%3Cpath fill='none' stroke='%23B45309' stroke-width='0.4' d='M28 0l27 15.5v31L28 62L1 46.5v-31L28 0z'/%3E%3C/svg%3E");
-}
-
 [data-theme="light"] .bg-circuit-lines {
   opacity: 0.03;
   background-image:
@@ -439,7 +421,12 @@ section h2:hover {
 }
 
 [data-theme="light"] .hero-title-gradient {
-  background: linear-gradient(135deg, #1C1917 0%, #57534E 40%, #B45309 70%, #1C1917 100%);
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  -webkit-text-fill-color: var(--color-text);
+  color: var(--color-text);
+  animation: none;
 }
 
 [data-theme="light"] .hero-glow {
@@ -458,7 +445,6 @@ section h2:hover {
 
 @media (prefers-reduced-motion: reduce) {
   .bg-gradient,
-  .bg-hex-pattern,
   .bg-circuit-lines,
   .bg-node,
   .bg-stars .star,
