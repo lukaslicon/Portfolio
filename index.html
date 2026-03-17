@@ -58,7 +58,85 @@
         }, { passive: true });
 
         var starsEl = document.getElementById('bg-stars');
-        if (starsEl) {
+        var stars = [];
+        var PUSH_RADIUS = 120;
+        var PUSH_STRENGTH = 2.5;
+        var RESPAWN_MS = 2500;
+        var STAR_DRAG = 0.985;
+        var STAR_MIN_SPEED = 0.02;
+
+        function getViewport() {
+          return { w: window.innerWidth, h: window.innerHeight };
+        }
+
+        function createStars() {
+          if (!starsEl) return;
+          var v = getViewport();
+          for (var i = 0; i < 100; i++) {
+            var s = document.createElement('span');
+            s.className = 'star';
+            s.style.animationDelay = (Math.random() * 3) + 's';
+            s.style.animationDuration = (2 + Math.random() * 2) + 's';
+            starsEl.appendChild(s);
+            stars.push({
+              el: s,
+              x: Math.random() * v.w,
+              y: Math.random() * v.h,
+              vx: 0,
+              vy: 0,
+              offScreenSince: null
+            });
+          }
+        }
+
+        function respawnStar(star, v) {
+          star.x = 8 + Math.random() * (v.w - 16);
+          star.y = 8 + Math.random() * (v.h - 16);
+          star.vx = 0;
+          star.vy = 0;
+          star.offScreenSince = null;
+        }
+
+        function runStarLoop() {
+          var v = getViewport();
+          var now = Date.now();
+          for (var i = 0; i < stars.length; i++) {
+            var star = stars[i];
+            star.x += star.vx;
+            star.y += star.vy;
+            if (star.x < 0) { star.x = 0; star.vx = -star.vx; star.offScreenSince = null; }
+            if (star.x > v.w) { star.x = v.w; star.vx = -star.vx; star.offScreenSince = null; }
+            if (star.y < 0) { star.y = 0; star.vy = -star.vy; star.offScreenSince = null; }
+            if (star.y > v.h) { star.y = v.h; star.vy = -star.vy; star.offScreenSince = null; }
+            star.vx *= STAR_DRAG;
+            star.vy *= STAR_DRAG;
+            var speed = Math.sqrt(star.vx * star.vx + star.vy * star.vy);
+            if (speed < STAR_MIN_SPEED) { star.vx = 0; star.vy = 0; }
+            var onScreen = star.x >= 0 && star.x <= v.w && star.y >= 0 && star.y <= v.h;
+            if (!onScreen) {
+              if (star.offScreenSince === null) star.offScreenSince = now;
+              if (now - star.offScreenSince > RESPAWN_MS) respawnStar(star, v);
+            } else {
+              star.offScreenSince = null;
+            }
+            star.el.style.left = star.x + 'px';
+            star.el.style.top = star.y + 'px';
+          }
+          requestAnimationFrame(runStarLoop);
+        }
+
+        if (starsEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          createStars();
+          runStarLoop();
+          window.addEventListener('resize', function() {
+            var v = getViewport();
+            for (var i = 0; i < stars.length; i++) {
+              var star = stars[i];
+              if (star.x > v.w) { star.x = v.w; star.vx = -Math.abs(star.vx); }
+              if (star.y > v.h) { star.y = v.h; star.vy = -Math.abs(star.vy); }
+            }
+          });
+        } else if (starsEl) {
           for (var i = 0; i < 100; i++) {
             var s = document.createElement('span');
             s.className = 'star';
@@ -96,6 +174,18 @@
           r.style.top = e.clientY + 'px';
           effects.appendChild(r);
           setTimeout(function() { r.remove(); }, 800);
+          var cx = e.clientX, cy = e.clientY;
+          for (var i = 0; i < stars.length; i++) {
+            var star = stars[i];
+            var dx = star.x - cx, dy = star.y - cy;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < PUSH_RADIUS && dist > 0) {
+              var falloff = 1 - dist / PUSH_RADIUS;
+              var force = PUSH_STRENGTH * falloff;
+              star.vx += (dx / dist) * force;
+              star.vy += (dy / dist) * force;
+            }
+          }
         });
       })();
     </script>

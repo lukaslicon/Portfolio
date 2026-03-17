@@ -126,7 +126,7 @@
   50% { background-position: 100% 50%, 80% 90%, 20% 30%; opacity: 0.06; }
 }
 
-/* Floating nodes (parallax with mouse) */
+/* Floating nodes */
 .bg-nodes {
   position: absolute;
   inset: 0;
@@ -154,30 +154,6 @@
 @keyframes nodeFloat {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 0.85; }
-}
-
-@media (hover: hover) {
-  .bg-node {
-    transform: translate(
-      calc((var(--mouse-x-pct) - 0.5) * 24px),
-      calc((var(--mouse-y-pct) - 0.5) * 24px)
-    );
-  }
-  .bg-node[data-node="1"],
-  .bg-node[data-node="3"],
-  .bg-node[data-node="5"] {
-    transform: translate(
-      calc((var(--mouse-x-pct) - 0.5) * -18px),
-      calc((var(--mouse-y-pct) - 0.5) * 18px)
-    );
-  }
-  .bg-node[data-node="2"],
-  .bg-node[data-node="6"] {
-    transform: translate(
-      calc((var(--mouse-x-pct) - 0.5) * 14px),
-      calc((var(--mouse-y-pct) - 0.5) * -14px)
-    );
-  }
 }
 
 /* Click ripple */
