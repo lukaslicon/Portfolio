@@ -1,4 +1,4 @@
-const { useState } = React;
+const { useState, useEffect, useRef } = React;
 const { createRoot } = ReactDOM;
 
 /* ========== Data ========== */
@@ -90,10 +90,22 @@ const projects = [
   },
 ];
 
+const workItems = [
+  { title: 'Founding Engineer', company: 'Glade', dates: 'Oct 2025 - Present', logo: 'assets/gladestudio_logo.jpg', summary: 'GladeCore plugin for Unity/Unreal—local AI inference (STT, TTS, LLM) for dynamic NPC conversations. Lead engineering decisions.', tech: 'C++, C#, Unreal Engine 5, Unity' },
+  { title: 'AI Engineer', company: 'Glade', dates: 'Oct 2024 - Oct 2025', logo: 'assets/gladestudio_logo.jpg', summary: 'GladeCore plugin: local AI inference framework for immersive generative experiences and unscripted NPC dialogue.', tech: 'C++, C#, Unreal Engine 5, Unity' },
+  { title: 'Application Developer (Internship)', company: 'BluuKazi', dates: 'Jul 2024 - Oct 2024', logo: 'assets/bluukazilogo.png', summary: 'Android mobile app; Jira, GitLab, Figma; agile, performance optimization.', tech: 'Kotlin, Android Studio' },
+  { title: 'Technical Consultant', company: 'Target', dates: 'Sep 2021 - Jun 2022', logo: 'assets/targetlogo.png', summary: 'Product support, troubleshooting, device setup and repairs, technology sales.', tech: '' },
+];
+
+const educationItems = [
+  { name: 'University of California, Santa Cruz', degree: 'B.S. Computer Science: Computer Game Design', year: '2024', logo: 'assets/ucsc logo.jpg', summary: 'Top-ranked game design program; interdisciplinary CS, game design, and hands-on development.' },
+  { name: 'College of Marin', degree: 'AS-T Computer Science', year: '2019–2022', logo: 'assets/COM-logo-color.png', summary: 'Foundation in C++, algorithms, data structures; calculus, linear algebra, discrete math.' },
+];
+
 /* ========== Components ========== */
 
-const ProjectCard = ({ project }) => (
-  <article className="project-item">
+const ProjectCard = ({ project, index }) => (
+  <article className="project-item section-reveal card-glow-border" data-index={index}>
     <h3>{project.title}</h3>
     {project.links.length > 0 && (
       <h5>
@@ -135,167 +147,158 @@ const ProjectCard = ({ project }) => (
 
 /* ========== App ========== */
 
+const SECTION_IDS = ['about', 'projects', 'work', 'education'];
+const navItems = SECTION_IDS.map(id => ({ id, label: id.charAt(0).toUpperCase() + id.slice(1) }));
+
 const App = () => {
-  const [currentSection, setCurrentSection] = useState('about');
-  const [fadeClass, setFadeClass] = useState('fade-in');
+  const [navOpen, setNavOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('about');
+  const mainRef = useRef(null);
 
-  const handleSectionChange = (section) => {
-    setFadeClass('fade-out');
-    setTimeout(() => {
-      setCurrentSection(section);
-      setFadeClass('fade-in');
-    }, 300);
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setNavOpen(false);
+    }
   };
 
-  const sections = {
-    about: (
-      <section id="about" className={`content-box ${fadeClass}`}>
-        <div className="about-header">
-          <img src="assets/profilepic.jpg" alt="Profile" className="about-image" />
-          <h2>About Me</h2>
-        </div>
-        <div className="about-text">
-          <p>Hello, I'm Lukas Licon, a passionate gameplay programmer and software engineer with a strong focus on C++, Unreal Engine, and AI-driven gameplay systems. My fascination with technology and video games began at a young age, fueled by countless hours immersed in MMORPGs like World of Warcraft. This early passion grew into a career ambition to craft immersive and engaging game experiences that captivate players as I was once captivated.</p>
-          <p>My career has combined rigorous programming challenges with hands-on development, giving me a solid foundation in both technical depth and creative problem-solving. I thrive on tackling complex systems, and I spend each day pushing further into Unreal Engine and C++ to design innovative gameplay and solve problems with critical thinking.</p>
-          <p>Alongside gameplay programming, I specialize in AI inference and runtime integration of models into game environments. In both my professional work and personal projects, I've trained full models and LoRA adapters, conducted dataset testing, emotion research, and post-training evaluation, and applied these models to speech-to-text, text-to-text, and text-to-speech systems for interactive runtime use. This bridges cutting-edge AI research with practical gameplay applications while remaining on local devices, allowing NPCs to respond dynamically with unique personalities, knowledge, and emotional nuance without large cloud API costs.</p>
-          <p>At the core of my work is a drive to build systems that make advanced AI practical, intuitive, and impactful in real-time environments. I take deep satisfaction in transforming ambitious concepts into working technology whether that's developing responsive NPC interactions, designing runtime pipelines for AI inference, or training and evaluating models for speech and text integration. My passion is pushing the boundaries of how AI can be applied, and I'm eager to collaborate with teams who want to explore new ways to create more dynamic, intelligent, and immersive interactive experiences.</p>
-        </div>
-      </section>
-    ),
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -60% 0px', threshold: 0 }
+    );
+    SECTION_IDS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
 
-    projects: (
-      <section id="projects" className={`content-box ${fadeClass}`}>
-        <h2>Projects</h2>
-        {projects.map((project, i) => (
-          <ProjectCard key={i} project={project} />
-        ))}
-      </section>
-    ),
-
-    work: (
-      <section id="work" className={`content-box ${fadeClass}`}>
-        <h2>Work Experience</h2>
-        <div className="item-container">
-          <img src="assets/gladestudio_logo.jpg" alt="Glade" className="item-logo" />
-          <div className="item-description">
-            <b><p>Founding Engineer</p></b>
-            <p>Oct 2025 - Present</p>
-            <p>C#/C++. Created and worked on the GladeCore plugin for Unity and Unreal engine to bring immersive generative experiences to players using local AI inference. Designed an easy-to-use framework for local AI inference (speech-to-text, text-to-text, text-to-speech), enabling players to hold dynamic, unscripted conversations with NPCs through voice or text.</p>
-            <p>Advised and led the engineering team on technical decisions based on capabilities and timelines.</p>
-            <p><b>Tech Stack:</b> C++, C#, Unreal Engine 5, Unity</p>
-          </div>
-        </div>
-        <div className="item-container">
-          <img src="assets/gladestudio_logo.jpg" alt="Glade" className="item-logo" />
-          <div className="item-description">
-            <b><p>AI Engineer</p></b>
-            <p>Oct 2024 - Oct 2025</p>
-            <p>Created and worked on the GladeCore plugin for Unity and Unreal engine using C#/C++ to bring immersive generative experiences to players using local AI inference. Designed an easy-to-use framework for local AI inference (speech-to-text, text-to-text, text-to-speech), enabling players to hold dynamic, unscripted conversations with NPCs through voice or text.</p>
-            <p><b>Tech Stack:</b> C++, C#, Unreal Engine 5, Unity</p>
-          </div>
-        </div>
-        <div className="item-container">
-          <img src="assets/bluukazilogo.png" alt="BluuKazi" className="item-logo" />
-          <div className="item-description">
-            <b><p>Application Developer - Internship</p></b>
-            <p>Jul 2024 - Oct 2024</p>
-            <p>Collaborated with a team for 3 months to build a mobile app for Android. Utilized tools like Jira, GitLab, and Figma, and contributed to agile development, task prioritization, and performance optimization. Use of Kotlin and Android Studio.</p>
-            <p><b>Tech Stack:</b> Kotlin, Android Studio</p>
-          </div>
-        </div>
-        <div className="item-container">
-          <img src="assets/targetlogo.png" alt="Target" className="item-logo" />
-          <div className="item-description">
-            <b><p>Technical Consultant - Target</p></b>
-            <p>Sep 2021 - Jun 2022</p>
-            <p>Utilized my product knowledge to help customers solve their issues or set up desired systems. Learned to troubleshoot broken or misused electronics, activate devices, help customers with timely and satisfactory repairs/services, and provide customers with technology-based information for sales.</p>
-          </div>
-        </div>
-      </section>
-    ),
-
-    education: (
-      <section id="education" className={`content-box ${fadeClass}`}>
-        <h2>Education</h2>
-        <div className="item-container">
-          <img src="assets/ucsc logo.jpg" alt="UCSC" className="item-logo" />
-          <div className="item-description">
-            <b><p>University of California, Santa Cruz, Graduated 2024</p></b>
-            <p>The University of California, Santa Cruz (UCSC) offers one of the top-ranked game design programs in the world. The Computer Science: Computer Game Design B.S. program, established in 2006, was the first of its kind in the University of California system. This program is housed within the Baskin School of Engineering and is known for blending technical rigor with creative game design, making it a pioneer in game development education. UCSC's program was recently ranked in the top five best game/simulation development programs in the nation by U.S. News & World Report.</p>
-            <p>The curriculum is highly interdisciplinary, with courses that cover core computer science principles, game design theory, and practical game development skills. Students engage in hands-on projects, working with cutting-edge tools and technologies while also exploring the societal impact of games. UCSC fosters innovation through its integration of research, experiential learning, and collaboration across disciplines like performance, play, and design.</p>
-          </div>
-        </div>
-        <div className="item-container">
-          <img src="assets/COM-logo-color.png" alt="College of Marin" className="item-logo" />
-          <div className="item-description">
-            <b><p>College of Marin, 2019-2022, Associate Transfer in Computer Science</p></b>
-            <p>At the College of Marin, I earned an Associate of Science for Transfer (AS-T) in Computer Science. The program provided me with a solid foundation in both theoretical and applied aspects of computer science, with a focus on C++ programming. Through rigorous coursework, I developed a deep understanding of algorithms, data structures, and software development principles. Additionally, the curriculum included challenging mathematics courses such as calculus, linear algebra, and discrete mathematics. These courses equipped me with strong analytical and problem-solving skills, which have been essential in my academic and professional journey.</p>
-          </div>
-        </div>
-      </section>
-    ),
-
-    contact: (
-      <section id="contact" className={`content-box ${fadeClass}`}>
-        <h2>Contact</h2>
-        <div className="contact-group">
-          <a href="mailto:lukas@licons.com" className="button">
-            <img src="assets/email.png" alt="" className="contact-icon" />
-            Email
-          </a>
-          <a href="https://www.linkedin.com/in/lukas-licon/" className="button" target="_blank" rel="noopener noreferrer">
-            <img src="assets/In-Blue.png" alt="" className="contact-icon" />
-            LinkedIn
-          </a>
-          <a href="https://github.com/lukaslicon" className="button" target="_blank" rel="noopener noreferrer">
-            <img src="assets/github-mark.png" alt="" className="contact-icon" />
-            GitHub
-          </a>
-        </div>
-        <h2>Please reach out, so we can talk about how I can fit into your team!</h2>
-        <form action="https://formspree.io/f/xovapqqz" method="POST" className="contact-form">
-          <div className="form-group">
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="_replyto" required />
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" className="button submit-button">Send Message</button>
-        </form>
-      </section>
-    ),
-  };
-
-  const navItems = ['about', 'projects', 'work', 'education', 'contact'];
+  useEffect(() => {
+    const reveal = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add('in-view');
+        });
+      },
+      { rootMargin: '-40px 0px -40px 0px', threshold: 0 }
+    );
+    document.querySelectorAll('.section-reveal').forEach((el) => reveal.observe(el));
+    return () => reveal.disconnect();
+  }, []);
 
   return (
     <>
-      <header>
-        <h1>Lukas Daniel Licon</h1>
-        <p>AI Engineer, Game AI Engineer, Gameplay Programmer</p>
-        <h5>lukas@licons.com</h5>
-        <a className="button resume-button no-scale" href="resumes/AIEngineer-Resume.pdf" target="_blank" rel="noopener noreferrer">
-          Resume
-        </a>
-        <nav className="navbar">
-          {navItems.map((item) => (
-            <button
-              key={item}
-              onClick={() => handleSectionChange(item)}
-              className={currentSection === item ? 'active' : ''}
-            >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
-            </button>
-          ))}
+      <header className="site-header">
+        <a href="#about" className="header-logo" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>Lukas Licon</a>
+        <nav id="nav-menu" className={`navbar ${navOpen ? 'navbar-open' : ''}`} aria-hidden={!navOpen}>
+          <ul className="nav-list">
+            {navItems.map((item) => (
+              <li key={item.id}>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection(item.id)}
+                  className={activeSection === item.id ? 'active' : ''}
+                >
+                  {item.label}
+                </button>
+              </li>
+            ))}
+            <li>
+              <a className="nav-resume button button-shimmer" href="resumes/AIEngineer-Resume.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setNavOpen(false)}>
+                Resume
+              </a>
+            </li>
+          </ul>
         </nav>
+        <div className="header-right">
+          <a href="mailto:lukas@licons.com" className="header-contact">Contact me: lukas@licons.com</a>
+          <button
+            type="button"
+            className="nav-toggle"
+            aria-expanded={navOpen}
+            aria-controls="nav-menu"
+            aria-label="Toggle menu"
+            onClick={() => setNavOpen(!navOpen)}
+          >
+            <span className="hamburger-line" />
+            <span className="hamburger-line" />
+            <span className="hamburger-line" />
+          </button>
+        </div>
       </header>
-      <main>{sections[currentSection]}</main>
+
+      <main ref={mainRef}>
+        <section id="about" className="content-box section-reveal in-view">
+          <div className="about-header">
+            <img src="assets/profilepic.jpg" alt="Lukas Licon" className="about-image" />
+            <div className="about-title-block">
+              <h1 className="hero-title-gradient hero-glow">Lukas Daniel Licon</h1>
+              <p className="about-tagline">AI Engineer · Gameplay Programmer</p>
+            </div>
+          </div>
+          <div className="about-text">
+            <p>I'm a gameplay programmer and software engineer focused on C++, Unreal Engine, and AI-driven systems. My path started with a deep love for games and technology—from MMORPGs to building the systems that power them.</p>
+            <p>I combine rigorous programming with hands-on development: complex systems, Unreal Engine, and C++ are where I thrive. I also specialize in AI inference and runtime integration—training models and LoRAs, dataset and emotion research, and applying speech-to-text, text-to-text, and text-to-speech in games so NPCs can respond with personality and nuance on-device, without cloud APIs.</p>
+            <p>I'm driven to make advanced AI practical and impactful in real time—whether that's responsive NPCs, runtime inference pipelines, or evaluation and integration. I'm eager to work with teams that want to push what's possible in dynamic, intelligent experiences.</p>
+          </div>
+        </section>
+
+        <section id="projects" className="content-box">
+          <h2>Projects</h2>
+          {projects.map((project, i) => (
+            <ProjectCard key={i} project={project} index={i} />
+          ))}
+        </section>
+
+        <section id="work" className="content-box">
+          <h2>Work Experience</h2>
+          <div className="work-grid">
+            {workItems.map((item, i) => (
+              <div key={i} className="item-container section-reveal card-glow-border" data-index={i}>
+                <img src={item.logo} alt={item.company} className="item-logo" />
+                <div className="item-description">
+                  <b><p className="item-title">{item.title}</p></b>
+                  <p className="item-meta">{item.company} · {item.dates}</p>
+                  <p>{item.summary}</p>
+                  {item.tech && <p><b>Tech:</b> {item.tech}</p>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="education" className="content-box">
+          <h2>Education</h2>
+          <div className="education-grid">
+            {educationItems.map((item, i) => (
+              <div key={i} className="item-container section-reveal card-glow-border" data-index={i}>
+                <img src={item.logo} alt={item.name} className="item-logo" />
+                <div className="item-description">
+                  <b><p className="item-title">{item.name}</p></b>
+                  <p className="item-meta">{item.degree} · {item.year}</p>
+                  <p>{item.summary}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <footer className="site-footer">
+          <p>Contact me: <a href="mailto:lukas@licons.com">lukas@licons.com</a></p>
+          <div className="footer-links">
+            <a href="https://www.linkedin.com/in/lukas-licon/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/lukaslicon" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </footer>
+      </main>
     </>
   );
 };

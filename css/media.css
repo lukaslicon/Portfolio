@@ -1,1 +1,77 @@
-/* Consolidated responsive overrides - breakpoints: 600px, 768px, 1050px */
+/* Responsive overrides - breakpoints: 600px, 768px, 1050px */
+
+/* Small mobile: compact header, ensure touch targets */
+@media (max-width: 599px) {
+  .site-header {
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  .header-logo {
+    font-size: 1.1rem;
+  }
+
+  .header-contact {
+    max-width: 140px;
+    font-size: 0.85rem;
+  }
+
+  .nav-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  #about {
+    padding-top: var(--space-2xl);
+  }
+
+  section {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
+
+  main {
+    padding-top: 64px;
+  }
+
+  .content-box {
+    scroll-margin-top: 64px;
+  }
+}
+
+/* Tablet and up: section spacing */
+@media (min-width: 600px) {
+  section {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+}
+
+/* Desktop: max-width for readability */
+@media (min-width: 1050px) {
+  section {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+  }
+
+  .about-text {
+    max-width: 720px;
+  }
+
+  .project-media img,
+  .project-media video {
+    max-width: 520px;
+  }
+}
+
+/* Prevent horizontal overflow globally */
+html, body {
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}

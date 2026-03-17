@@ -1,36 +1,61 @@
-/* About section */
+/* About section - hero + intro */
+
+#about {
+  padding-top: var(--space-3xl);
+}
 
 .about-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
 }
 
-.about-header h2 {
+.about-title-block {
+  text-align: center;
+}
+
+.about-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 5vw, var(--font-size-2xl));
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.about-tagline {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
   margin: 0;
-  margin-right: var(--space-md);
-  margin-left: var(--space-md);
 }
 
-.about-header .about-image {
-  width: 300px;
-  height: 300px;
+.about-image {
+  width: min(280px, 80vw);
+  height: min(280px, 80vw);
   border-radius: 50%;
   object-fit: cover;
+  border: 2px solid var(--color-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.about-text {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.about-text p {
+  margin-bottom: var(--space-md);
+}
+.about-text p:last-child {
   margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .about-header {
-    flex-direction: column;
+    flex-direction: row;
+    text-align: left;
   }
-
-  .about-header h2 {
-    margin: 0 0 var(--space-sm) 0;
-  }
-
-  .about-image {
-    margin: 0 0 var(--space-sm) 0;
+  .about-title-block {
+    text-align: left;
   }
 }

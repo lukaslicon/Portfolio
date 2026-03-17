@@ -1,22 +1,41 @@
-/* Layout: header, main */
+/* Layout: fixed header, main with scroll offset */
 
-header {
-  margin-top: var(--space-xl);
-  text-align: center;
-  padding: var(--space-3xl) var(--space-md);
-  background: var(--color-bg);
-}
-
-header h1 {
-  font-size: var(--font-size-2xl);
-  color: var(--color-text);
-}
-
-header p {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-muted);
+.site-header header,
+.site-header {
+  margin-top: 0;
 }
 
 main {
-  min-height: 50vh;
+  padding-top: 72px; /* space for fixed header */
+  min-height: 100vh;
+}
+
+.content-box {
+  scroll-margin-top: 72px;
+}
+
+.site-footer {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-md);
+  background: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border);
+}
+.site-footer p {
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-muted);
+}
+.site-footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+.footer-links a {
+  font-size: 0.95rem;
 }

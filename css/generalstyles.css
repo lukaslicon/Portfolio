@@ -10,23 +10,34 @@ html, body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans);
   color: var(--color-text);
   background-color: var(--color-bg);
+  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(34, 211, 238, 0.08), transparent),
+    linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-subtle) 100%);
 }
 
 h1 {
+  font-family: var(--font-display);
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--space-md);
+  letter-spacing: 0.02em;
 }
 
 h2, h6 {
+  font-family: var(--font-display);
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--space-md);
+  letter-spacing: 0.02em;
 }
 
 h3, h4, h5 {
+  font-family: var(--font-display);
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--space-md);
   text-align: center;
@@ -54,31 +65,12 @@ section h2 {
 
 section h2::after {
   content: '';
-  width: 60px;
-  height: 4px;
-  background-color: var(--color-accent);
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), transparent);
   display: block;
   margin: var(--space-md) auto 0;
+  border-radius: 2px;
 }
 
-/* Section transition */
-.content-box.fade-out {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.content-box.fade-in {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: var(--space-md);
-  background-color: var(--color-bg-subtle);
-}
-
-footer p {
-  color: var(--color-text);
-}
+/* Section base - scroll reveal handled in animations.css */

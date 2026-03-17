@@ -1,0 +1,96 @@
+/* Scroll-triggered and interaction animations */
+
+/* Section reveal on scroll */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.section-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children (e.g. project cards, work items) */
+.section-reveal[data-index] {
+  transition-delay: calc(var(--stagger, 0) * 60ms);
+}
+.section-reveal.in-view[data-index="0"] { transition-delay: 0ms; }
+.section-reveal.in-view[data-index="1"] { transition-delay: 80ms; }
+.section-reveal.in-view[data-index="2"] { transition-delay: 160ms; }
+.section-reveal.in-view[data-index="3"] { transition-delay: 240ms; }
+.section-reveal.in-view[data-index="4"] { transition-delay: 320ms; }
+.section-reveal.in-view[data-index="5"] { transition-delay: 400ms; }
+.section-reveal.in-view[data-index="6"] { transition-delay: 480ms; }
+.section-reveal.in-view[data-index="7"] { transition-delay: 560ms; }
+.section-reveal.in-view[data-index="8"] { transition-delay: 640ms; }
+.section-reveal.in-view[data-index="9"] { transition-delay: 720ms; }
+.section-reveal.in-view[data-index="10"] { transition-delay: 800ms; }
+
+/* Button morph / hover lift */
+.button {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--color-accent-glow);
+}
+.button:active {
+  transform: translateY(0);
+}
+
+/* Project card hover */
+.project-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-item:hover {
+  transform: translateY(-4px);
+}
+.project-item .project-media img,
+.project-item .project-media video {
+  transition: box-shadow 0.3s ease;
+}
+.project-item:hover .project-media img,
+.project-item:hover .project-media video {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* Work/Education card hover */
+.item-container {
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.item-container:hover {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(34, 211, 238, 0.2);
+}
+
+/* Nav Resume button: standout morph on hover */
+.nav-resume.button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 28px var(--color-accent-glow);
+  border-color: var(--color-accent);
+}
+
+/* Project links smooth transition */
+.project-item a {
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+.project-item a:hover {
+  color: var(--color-accent);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .section-reveal,
+  .section-reveal.in-view,
+  .button,
+  .project-item,
+  .item-container {
+    transition: none;
+  }
+  .section-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

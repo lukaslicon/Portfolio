@@ -1,14 +1,16 @@
-/* Design tokens */
+/* Design tokens - futuristic dark theme */
 :root {
-  /* Colors - dark palette */
-  --color-text: #E5ECF4;           /* light gray-blue for body text */
-  --color-text-muted: #9AA4B2;     /* muted gray-blue */
-  --color-accent: #3B82F6;         /* bright blue accent */
-  --color-accent-hover: #2563EB;   /* deeper blue on hover */
-  --color-bg: #020617;             /* near-black background */
-  --color-bg-subtle: #020617;      /* keep header consistent with body */
-  --color-surface: #020617;        /* section background (can vary later) */
-  --color-border: #1E293B;         /* dark slate border */
+  /* Colors - dark palette with cyan/blue accent */
+  --color-text: #E8EEF4;
+  --color-text-muted: #94A3B8;
+  --color-accent: #22D3EE;
+  --color-accent-hover: #06B6D4;
+  --color-accent-glow: rgba(34, 211, 238, 0.25);
+  --color-bg: #0A0E17;
+  --color-bg-subtle: #0F1623;
+  --color-surface: #131B2E;
+  --color-border: #1E293B;
+  --navbar-bg: rgba(10, 14, 23, 0.85);
 
   /* Spacing scale (8px base) */
   --space-xs: 8px;
@@ -21,21 +23,23 @@
   --space-4xl: 64px;
 
   /* Typography */
-  --font-sans: 'Open Sans', sans-serif;
+  --font-sans: 'Syne', system-ui, sans-serif;
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
   --font-size-base: 1rem;
-  --font-size-lg: 1.2rem;
-  --font-size-xl: 2rem;
-  --font-size-2xl: 2.5rem;
-  --line-height: 1.6;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.75rem;
+  --font-size-2xl: 2.25rem;
+  --line-height: 1.65;
   --font-weight-bold: 700;
   --font-weight-semibold: 600;
 
   /* Borders */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
 
-  /* Breakpoints (for reference in media queries) */
+  /* Breakpoints */
   --bp-sm: 600px;
   --bp-md: 768px;
   --bp-lg: 1050px;

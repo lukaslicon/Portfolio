@@ -6,25 +6,24 @@
   display: inline-flex;
   align-items: center;
   padding: var(--space-sm) var(--space-md);
-  background: linear-gradient(135deg, var(--color-accent), #0f172a);
-  color: var(--color-text);
+  background: linear-gradient(135deg, var(--color-accent), rgba(15, 23, 42, 0.9));
+  color: var(--color-bg);
   text-decoration: none;
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(34, 211, 238, 0.4);
   border-radius: var(--radius-md);
   font-weight: var(--font-weight-semibold);
   cursor: pointer;
   font-size: var(--font-size-base);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
   transform: translateY(0);
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
 .button:hover,
 .button:focus-visible {
-  background: linear-gradient(135deg, var(--color-accent-hover), #0f172a);
-  border-color: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, var(--color-accent-hover), rgba(15, 23, 42, 0.95));
+  border-color: var(--color-accent);
+  box-shadow: 0 6px 24px var(--color-accent-glow);
+  transform: translateY(-2px);
 }
 
 .button:active {
@@ -66,45 +65,66 @@
 }
 
 /* Content card (work experience, education) */
+.work-grid,
+.education-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
 .item-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: var(--space-3xl);
+  margin-bottom: 0;
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: rgba(19, 27, 46, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.item-title {
+  margin-bottom: var(--space-xs);
+}
+.item-meta {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-sm);
 }
 
 .item-logo {
-  width: 150px;
+  width: 120px;
   height: auto;
   margin-bottom: var(--space-md);
-}
-
-.item-logo img {
-  width: 100%;
-  height: auto;
-  display: block;
+  border-radius: var(--radius-md);
+  object-fit: contain;
 }
 
 .item-description {
-  max-width: 800px;
+  max-width: 720px;
   margin: 0 auto;
   text-align: center;
 }
 
 .item-description p {
   text-align: left;
+  margin-bottom: var(--space-xs);
+}
+.item-description p:last-child {
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
   .item-container {
     flex-direction: row;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     gap: var(--space-xl);
   }
 
   .item-logo {
-    width: 200px;
+    width: 100px;
     flex-shrink: 0;
     margin-bottom: 0;
   }
@@ -112,6 +132,7 @@
   .item-description {
     flex: 1;
     text-align: left;
+    max-width: none;
   }
 
   .item-description p {
