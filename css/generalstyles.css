@@ -63,35 +63,22 @@ section h2 {
   position: relative;
 }
 
-/* Section heading divider: center diamond + glowing line */
-section h2::before {
-  content: '';
-  display: block;
-  width: 6px;
-  height: 6px;
-  margin: var(--space-md) auto var(--space-sm);
-  background: var(--color-accent);
-  transform: rotate(45deg);
-  box-shadow: 0 0 12px var(--color-accent-glow), 0 0 24px rgba(34, 211, 238, 0.15);
-  border-radius: 1px;
-}
-
+/* Section heading divider: simple clean line */
 section h2::after {
   content: '';
   display: block;
-  width: min(120px, 40vw);
+  width: min(100px, 32vw);
   height: 2px;
-  margin: 0 auto;
+  margin: var(--space-md) auto 0;
   background: linear-gradient(
     90deg,
-    transparent 0%,
-    var(--color-accent) 20%,
-    var(--color-accent) 80%,
-    transparent 100%
+    transparent,
+    var(--color-accent) 25%,
+    var(--color-accent) 75%,
+    transparent
   );
   border-radius: 2px;
-  box-shadow: 0 0 16px var(--color-accent-glow);
-  opacity: 0.9;
+  opacity: 1;
 }
 
 /* Section base - scroll reveal handled in animations.css */

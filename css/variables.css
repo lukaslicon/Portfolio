@@ -53,18 +53,18 @@
   --mouse-y-pct: 0.5;
 }
 
-/* Light theme */
+/* Light theme - warm daytime (space theme’s “day” side) */
 [data-theme="light"] {
-  --color-text: #0F172A;
-  --color-text-muted: #475569;
-  --color-accent: #0891B2;
-  --color-accent-hover: #0E7490;
-  --color-accent-glow: rgba(8, 145, 178, 0.2);
-  --color-bg: #F1F5F9;
-  --color-bg-subtle: #E2E8F0;
-  --color-surface: #FFFFFF;
-  --color-border: #CBD5E1;
-  --color-bg-glow: rgba(8, 145, 178, 0.06);
+  --color-text: #1C1917;
+  --color-text-muted: #57534E;
+  --color-accent: #0D9488;
+  --color-accent-hover: #0F766E;
+  --color-accent-glow: rgba(13, 148, 136, 0.2);
+  --color-bg: #ffffff;
+  --color-bg-subtle: #FEF3C7;
+  --color-surface: #FFFDF5;
+  --color-border: #E7E5E4;
+  --color-bg-glow: rgba(251, 191, 36, 0.12);
   --color-on-accent: #FFFFFF;
-  --navbar-bg: rgba(241, 245, 249, 0.9);
+  --navbar-bg: rgba(255, 251, 235, 0.92);
 }
