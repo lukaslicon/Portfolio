@@ -18,7 +18,7 @@ body {
   font-family: var(--font-sans);
   color: var(--color-text);
   background-color: var(--color-bg);
-  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(34, 211, 238, 0.08), transparent),
+  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, var(--color-bg-glow), transparent),
     linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-subtle) 100%);
 }
 
@@ -63,14 +63,35 @@ section h2 {
   position: relative;
 }
 
+/* Section heading divider: center diamond + glowing line */
+section h2::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: var(--space-md) auto var(--space-sm);
+  background: var(--color-accent);
+  transform: rotate(45deg);
+  box-shadow: 0 0 12px var(--color-accent-glow), 0 0 24px rgba(34, 211, 238, 0.15);
+  border-radius: 1px;
+}
+
 section h2::after {
   content: '';
-  width: 48px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-accent), transparent);
   display: block;
-  margin: var(--space-md) auto 0;
+  width: min(120px, 40vw);
+  height: 2px;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-accent) 20%,
+    var(--color-accent) 80%,
+    transparent 100%
+  );
   border-radius: 2px;
+  box-shadow: 0 0 16px var(--color-accent-glow);
+  opacity: 0.9;
 }
 
 /* Section base - scroll reveal handled in animations.css */

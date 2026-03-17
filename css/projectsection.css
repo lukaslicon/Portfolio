@@ -10,6 +10,10 @@
   backdrop-filter: blur(8px);
 }
 
+[data-theme="light"] .project-item {
+  background: rgba(255, 255, 255, 0.7);
+}
+
 .project-content {
   display: flex;
   flex-direction: column;

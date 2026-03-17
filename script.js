@@ -150,10 +150,30 @@ const ProjectCard = ({ project, index }) => (
 const SECTION_IDS = ['about', 'projects', 'work', 'education'];
 const navItems = SECTION_IDS.map(id => ({ id, label: id.charAt(0).toUpperCase() + id.slice(1) }));
 
+const THEME_KEY = 'portfolio-theme';
+
 const App = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem(THEME_KEY);
+      if (stored === 'light' || stored === 'dark') return stored;
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) return 'light';
+    }
+    return 'dark';
+  });
   const mainRef = useRef(null);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem(THEME_KEY, theme);
+    } catch (_) {}
+  }, [theme]);
+
+  const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
@@ -219,6 +239,17 @@ const App = () => {
           </ul>
         </nav>
         <div className="header-right">
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+          >
+            <span className="theme-toggle-icon" aria-hidden="true">
+              {theme === 'dark' ? '☀️' : '🌙'}
+            </span>
+          </button>
           <a href="mailto:lukas@licons.com" className="header-contact">Contact me: lukas@licons.com</a>
           <button
             type="button"

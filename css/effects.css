@@ -334,7 +334,7 @@
   100% { background-position: 200% 50%; }
 }
 
-/* ========== Section heading subtle glow ========== */
+/* ========== Section heading subtle glow + divider ========== */
 
 section h2 {
   transition: text-shadow 0.5s ease;
@@ -342,6 +342,16 @@ section h2 {
 
 section h2:hover {
   text-shadow: 0 0 24px rgba(34, 211, 238, 0.12);
+}
+
+/* Divider line subtle glow pulse */
+section h2::after {
+  animation: sectionLineGlow 4s ease-in-out infinite;
+}
+
+@keyframes sectionLineGlow {
+  0%, 100% { opacity: 0.85; box-shadow: 0 0 12px var(--color-accent-glow); }
+  50%      { opacity: 1;   box-shadow: 0 0 20px var(--color-accent-glow), 0 0 32px rgba(34, 211, 238, 0.12); }
 }
 
 /* ========== Hero image soft glow on hover ========== */
@@ -357,6 +367,105 @@ section h2:hover {
 
 /* ========== Reduce motion ========== */
 
+/* ========== Light theme overrides for background effects ========== */
+
+[data-theme="light"] .bg-gradient {
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(241, 245, 249, 0.98) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 80% 20%, rgba(8, 145, 178, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse 60% 70% at 50% 80%, rgba(6, 182, 212, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 100% at 50% 50%, rgba(226, 232, 240, 0.4) 0%, transparent 70%);
+}
+
+[data-theme="light"] .bg-stars .star {
+  background: rgba(15, 23, 42, 0.5);
+  box-shadow: 0 0 4px rgba(15, 23, 42, 0.4);
+}
+
+[data-theme="light"] .bg-stars .star:nth-child(5n) {
+  box-shadow: 0 0 6px rgba(8, 145, 178, 0.5);
+  background: rgba(8, 145, 178, 0.6);
+}
+
+[data-theme="light"] .bg-spotlight {
+  background: radial-gradient(
+    ellipse 80vmax 60vmax at var(--mouse-x) var(--mouse-y),
+    rgba(8, 145, 178, 0.05) 0%,
+    rgba(6, 182, 212, 0.02) 35%,
+    transparent 60%
+  );
+}
+
+@media (hover: none) {
+  [data-theme="light"] .bg-spotlight {
+    background: radial-gradient(
+      ellipse 90vmax 70vmax at 50% 50%,
+      rgba(8, 145, 178, 0.04) 0%,
+      transparent 55%
+    );
+  }
+}
+
+[data-theme="light"] .bg-hex-pattern {
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='98' viewBox='0 0 56 98'%3E%3Cpath fill='none' stroke='%230891B2' stroke-width='0.4' d='M28 0l27 15.5v31L28 62L1 46.5v-31L28 0z'/%3E%3C/svg%3E");
+}
+
+[data-theme="light"] .bg-circuit-lines {
+  opacity: 0.03;
+  background-image:
+    linear-gradient(105deg, transparent 45%, rgba(8, 145, 178, 0.25) 50%, transparent 55%),
+    linear-gradient(75deg, transparent 40%, rgba(6, 182, 212, 0.2) 50%, transparent 60%),
+    linear-gradient(15deg, transparent 60%, rgba(8, 145, 178, 0.15) 65%, transparent 70%);
+}
+
+[data-theme="light"] .bg-node {
+  background: rgba(8, 145, 178, 0.4);
+  box-shadow: 0 0 10px rgba(8, 145, 178, 0.25);
+}
+
+[data-theme="light"] .bg-click-ripple {
+  border-color: rgba(8, 145, 178, 0.4);
+}
+
+[data-theme="light"] .bg-grid {
+  background-image:
+    linear-gradient(rgba(8, 145, 178, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(8, 145, 178, 0.06) 1px, transparent 1px);
+}
+
+[data-theme="light"] .shooting-star {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(8, 145, 178, 0.06) 15%,
+    rgba(8, 145, 178, 0.15) 35%,
+    rgba(8, 145, 178, 0.35) 60%,
+    rgba(15, 23, 42, 0.7) 85%,
+    rgba(15, 23, 42, 0.9) 92%,
+    transparent 100%
+  );
+  box-shadow: 0 0 6px rgba(8, 145, 178, 0.25);
+}
+
+[data-theme="light"] .hero-title-gradient {
+  background: linear-gradient(135deg, #0F172A 0%, #475569 40%, var(--color-accent) 70%, #0F172A 100%);
+}
+
+[data-theme="light"] .hero-glow {
+  text-shadow: 0 0 40px rgba(8, 145, 178, 0.1);
+}
+
+[data-theme="light"] section h2:hover {
+  text-shadow: 0 0 24px rgba(8, 145, 178, 0.15);
+}
+
+[data-theme="light"] .about-image:hover {
+  box-shadow: 0 0 40px rgba(8, 145, 178, 0.15), 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== Reduce motion ========== */
+
 @media (prefers-reduced-motion: reduce) {
   .bg-gradient,
   .bg-hex-pattern,
@@ -366,7 +475,8 @@ section h2:hover {
   .shooting-star,
   .bg-click-ripple,
   .hero-title-gradient,
-  .card-glow-border::before {
+  .card-glow-border::before,
+  section h2::after {
     animation: none;
   }
   .bg-stars .star {

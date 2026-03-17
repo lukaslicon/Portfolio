@@ -10,6 +10,8 @@
   --color-bg-subtle: #0F1623;
   --color-surface: #131B2E;
   --color-border: #1E293B;
+  --color-bg-glow: rgba(34, 211, 238, 0.08);
+  --color-on-accent: #0A0E17;
   --navbar-bg: rgba(10, 14, 23, 0.85);
 
   /* Spacing scale (8px base) */
@@ -49,4 +51,20 @@
   --mouse-y: 50%;
   --mouse-x-pct: 0.5;
   --mouse-y-pct: 0.5;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --color-text: #0F172A;
+  --color-text-muted: #475569;
+  --color-accent: #0891B2;
+  --color-accent-hover: #0E7490;
+  --color-accent-glow: rgba(8, 145, 178, 0.2);
+  --color-bg: #F1F5F9;
+  --color-bg-subtle: #E2E8F0;
+  --color-surface: #FFFFFF;
+  --color-border: #CBD5E1;
+  --color-bg-glow: rgba(8, 145, 178, 0.06);
+  --color-on-accent: #FFFFFF;
+  --navbar-bg: rgba(241, 245, 249, 0.9);
 }
