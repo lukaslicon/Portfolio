@@ -1,0 +1,22 @@
+/* Layout: header, main */
+
+header {
+  margin-top: var(--space-xl);
+  text-align: center;
+  padding: var(--space-3xl) var(--space-md);
+  background-color: var(--color-bg-subtle);
+}
+
+header h1 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-text);
+}
+
+header p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+}
+
+main {
+  min-height: 50vh;
+}

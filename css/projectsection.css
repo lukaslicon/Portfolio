@@ -1,23 +1,61 @@
-/* Project Section */
+/* Projects section and project cards */
+
 .project-item {
-    margin-bottom: 60px;
+  margin-bottom: var(--space-3xl);
+  position: relative;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-description {
+  max-width: 800px;
+  text-align: center;
+}
+
+.project-description h4 {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.project-content img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius-md);
+}
+
+.project-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.project-media img,
+.project-media video {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+@media (min-width: 1050px) {
+  .project-media {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  
-  .project-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  .project-media video {
+    margin-right: var(--space-md);
   }
-  
-  .project-description {
-    max-width: 800px;
-    text-align: center;
+
+  .project-media video:last-child {
+    margin-right: 0;
   }
-  
-  .project-content img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 8px;
-  }
+}

@@ -1,0 +1,108 @@
+/* Shared components: buttons, content cards (work/education) */
+
+/* Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: var(--font-size-base);
+}
+
+.button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.button img {
+  width: 24px;
+  height: 24px;
+  margin-right: var(--space-xs);
+}
+
+.resume-button {
+  flex-shrink: 0;
+  width: auto;
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--font-size-base);
+  max-width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .button:not(.no-scale) {
+    width: 100%;
+    justify-content: center;
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.9rem;
+  }
+  .button:not(.no-scale) img {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+  }
+  .resume-button {
+    width: auto;
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--font-size-base);
+  }
+}
+
+/* Content card (work experience, education) */
+.item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.item-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: var(--space-md);
+}
+
+.item-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.item-description {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.item-description p {
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .item-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--space-xl);
+  }
+
+  .item-logo {
+    width: 200px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .item-description {
+    flex: 1;
+    text-align: left;
+  }
+
+  .item-description p {
+    text-align: left;
+  }
+}

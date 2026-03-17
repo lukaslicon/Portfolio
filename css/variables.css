@@ -1,0 +1,42 @@
+/* Design tokens */
+:root {
+  /* Colors - dark palette */
+  --color-text: #E5ECF4;           /* light gray-blue for body text */
+  --color-text-muted: #9AA4B2;     /* muted gray-blue */
+  --color-accent: #3B82F6;         /* bright blue accent */
+  --color-accent-hover: #2563EB;   /* deeper blue on hover */
+  --color-bg: #020617;             /* near-black background */
+  --color-bg-subtle: #020617;      /* keep header consistent with body */
+  --color-surface: #020617;        /* section background (can vary later) */
+  --color-border: #1E293B;         /* dark slate border */
+
+  /* Spacing scale (8px base) */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 40px;
+  --space-2xl: 48px;
+  --space-3xl: 60px;
+  --space-4xl: 64px;
+
+  /* Typography */
+  --font-sans: 'Open Sans', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 2rem;
+  --font-size-2xl: 2.5rem;
+  --line-height: 1.6;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+
+  /* Borders */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Breakpoints (for reference in media queries) */
+  --bp-sm: 600px;
+  --bp-md: 768px;
+  --bp-lg: 1050px;
+}

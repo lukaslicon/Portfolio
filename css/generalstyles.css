@@ -1,90 +1,84 @@
-/* General Styles */
-body {
-    font-family: 'Open Sans', sans-serif;
-    color: #2C3E50;
-    background-color: #FFFFFF;
-  }
-  h1{
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  h2, h6 {
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  
-  h3, h4, h5 {
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  /* Header */
-  header {
-    margin-top: 40px;
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #F8F9FA;
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    color: #2C3E50;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-    color: #7F8C8D;
-  }
-  
-  
+/* Base: reset, body, typography, section defaults */
+
 /* Global Reset */
 * {
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Sections */
-  section {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 60px 20px;
-  }
-  
-  section h2 {
-    font-size: 2rem;
-    color: #2C3E50;
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-  }
-  
-  section h2::after {
-    content: '';
-    width: 60px;
-    height: 4px;
-    background-color: #E74C3C;
-    display: block;
-    margin: 20px auto 0;
-  }
-  
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #F8F9FA;
-  }
-  
-  footer p {
-    color: #2C3E50;
-  }
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+h1 {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+}
+
+h2, h6 {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+}
+
+h3, h4, h5 {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+}
+
+/* Sections */
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-md);
+}
+
+section h2 {
+  font-size: var(--font-size-xl);
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-accent);
+  display: block;
+  margin: var(--space-md) auto 0;
+}
+
+/* Section transition */
+.content-box.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.content-box.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: var(--space-md);
+  background-color: var(--color-bg-subtle);
+}
+
+footer p {
+  color: var(--color-text);
+}
