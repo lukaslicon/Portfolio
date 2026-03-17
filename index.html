@@ -75,16 +75,16 @@
           var effects = document.querySelector('.bg-effects');
           if (!effects) return;
           var star = document.createElement('span');
-          star.className = 'shooting-star';
+          star.className = 'shooting-star' + (Math.random() < 0.5 ? ' shooting-star-rtl' : '');
           star.style.setProperty('--star-top', (5 + Math.random() * 35) + '%');
           effects.appendChild(star);
           setTimeout(function() { star.remove(); }, 2000);
         }
         function scheduleShootingStar() {
           fireShootingStar();
-          setTimeout(scheduleShootingStar, 4000 + Math.random() * 6000);
+          setTimeout(scheduleShootingStar, 45000 + Math.random() * 15000);
         }
-        setTimeout(scheduleShootingStar, 2000);
+        setTimeout(scheduleShootingStar, 3000);
 
         document.addEventListener('click', function(e) {
           if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;

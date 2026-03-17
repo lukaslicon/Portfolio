@@ -205,14 +205,14 @@
   }
 }
 
-/* Shooting star – straight left-to-right, trail behind, faces direction of travel */
+/* Shooting star – left-to-right or right-to-left, trail behind, angle matches direction */
 .shooting-star {
   position: fixed;
   --star-top: 20%;
   top: var(--star-top);
   left: -15%;
-  width: 140px;
-  height: 3px;
+  width: 70px;
+  height: 2px;
   background: linear-gradient(
     90deg,
     transparent 0%,
@@ -223,13 +223,20 @@
     rgba(255, 255, 255, 1) 92%,
     transparent 100%
   );
-  /* Angle matches motion: moves right + 22vh down ≈ 6° below horizontal */
   transform: rotate(6deg);
   transform-origin: left center;
-  animation: shootingStar 1.6s linear forwards;
+  animation: shootingStar 1.28s linear forwards;
   pointer-events: none;
   z-index: 2;
   box-shadow: 0 0 8px rgba(34, 211, 238, 0.4);
+}
+
+/* Right-to-left: reverse animation, flip streak so head leads; -6deg so tilt is downward */
+.shooting-star-rtl {
+  left: 115%;
+  top: calc(var(--star-top) + 22vh);
+  transform: scaleX(-1) rotate(-6deg);
+  animation-direction: reverse;
 }
 
 @keyframes shootingStar {
