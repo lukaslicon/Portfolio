@@ -22,11 +22,83 @@
 <body>
     <div class="bg-effects" aria-hidden="true">
       <div class="bg-gradient"></div>
+      <div class="bg-stars" id="bg-stars"></div>
+      <div class="bg-spotlight" id="bg-spotlight"></div>
+      <div class="bg-geometry">
+        <div class="bg-hex-pattern"></div>
+        <div class="bg-circuit-lines"></div>
+      </div>
+      <div class="bg-nodes">
+        <span class="bg-node" data-node="0"></span>
+        <span class="bg-node" data-node="1"></span>
+        <span class="bg-node" data-node="2"></span>
+        <span class="bg-node" data-node="3"></span>
+        <span class="bg-node" data-node="4"></span>
+        <span class="bg-node" data-node="5"></span>
+        <span class="bg-node" data-node="6"></span>
+        <span class="bg-node" data-node="7"></span>
+      </div>
       <div class="bg-grid"></div>
       <div class="bg-noise"></div>
     </div>
     <div id="root"></div>
 
+    <script>
+      (function() {
+        var root = document.documentElement;
+        function setMouse(x, y) {
+          root.style.setProperty('--mouse-x', x + 'px');
+          root.style.setProperty('--mouse-y', y + 'px');
+          root.style.setProperty('--mouse-x-pct', (x / window.innerWidth).toFixed(4));
+          root.style.setProperty('--mouse-y-pct', (y / window.innerHeight).toFixed(4));
+        }
+        document.addEventListener('mousemove', function(e) { setMouse(e.clientX, e.clientY); });
+        document.addEventListener('touchmove', function(e) {
+          if (e.touches.length) setMouse(e.touches[0].clientX, e.touches[0].clientY);
+        }, { passive: true });
+
+        var starsEl = document.getElementById('bg-stars');
+        if (starsEl) {
+          for (var i = 0; i < 100; i++) {
+            var s = document.createElement('span');
+            s.className = 'star';
+            s.style.left = (Math.random() * 100) + '%';
+            s.style.top = (Math.random() * 100) + '%';
+            s.style.animationDelay = (Math.random() * 3) + 's';
+            s.style.animationDuration = (2 + Math.random() * 2) + 's';
+            starsEl.appendChild(s);
+          }
+        }
+
+        function fireShootingStar() {
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          var effects = document.querySelector('.bg-effects');
+          if (!effects) return;
+          var star = document.createElement('span');
+          star.className = 'shooting-star';
+          star.style.setProperty('--star-top', (5 + Math.random() * 35) + '%');
+          effects.appendChild(star);
+          setTimeout(function() { star.remove(); }, 2000);
+        }
+        function scheduleShootingStar() {
+          fireShootingStar();
+          setTimeout(scheduleShootingStar, 4000 + Math.random() * 6000);
+        }
+        setTimeout(scheduleShootingStar, 2000);
+
+        document.addEventListener('click', function(e) {
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          var effects = document.querySelector('.bg-effects');
+          if (!effects) return;
+          var r = document.createElement('span');
+          r.className = 'bg-click-ripple';
+          r.style.left = e.clientX + 'px';
+          r.style.top = e.clientY + 'px';
+          effects.appendChild(r);
+          setTimeout(function() { r.remove(); }, 800);
+        });
+      })();
+    </script>
     <!-- React and ReactDOM from a CDN -->
     <script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js" crossorigin></script>    

@@ -43,4 +43,10 @@
   --bp-sm: 600px;
   --bp-md: 768px;
   --bp-lg: 1050px;
+
+  /* Mouse/touch position for interactive background (updated by JS) */
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --mouse-x-pct: 0.5;
+  --mouse-y-pct: 0.5;
 }
