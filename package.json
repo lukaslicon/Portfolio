@@ -1,0 +1,16 @@
+{
+  "name": "lukaslicon-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio site (static, GitHub Pages).",
+  "private": true,
+  "scripts": {
+    "build": "babel script.js --out-file app.js",
+    "watch": "babel script.js --out-file app.js --watch"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.0",
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.0"
+  }
+}
